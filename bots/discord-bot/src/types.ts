@@ -7,9 +7,17 @@ export interface RoleSnapshot {
   position: number;
 }
 
+export interface PermissionOverwriteSnapshot {
+  type: 'role' | 'member';
+  /** Role name (for type=role, including "@everyone") or user ID (for type=member) */
+  name: string;
+  allow: string; // BigInt as string
+  deny: string;  // BigInt as string
+}
+
 export interface ChannelSnapshot {
   name: string;
-  type: number; // ChannelType enum value
+  type: number;
   topic?: string;
   nsfw?: boolean;
   rateLimitPerUser?: number;
@@ -17,13 +25,14 @@ export interface ChannelSnapshot {
   userLimit?: number;
   position: number;
   parentIndex?: number; // index into the categories array
+  permissionOverwrites?: PermissionOverwriteSnapshot[];
 }
 
 export interface ServerSnapshot {
   name: string;
   description?: string;
   iconURL?: string;
-  roles: RoleSnapshot[];       // sorted by position ascending (excludes @everyone)
+  roles: RoleSnapshot[];         // sorted by position ascending (excludes @everyone)
   categories: ChannelSnapshot[]; // GUILD_CATEGORY channels
   channels: ChannelSnapshot[];   // non-category channels
   capturedAt: string;

@@ -6,13 +6,14 @@ import {
   GuildChannel,
   CategoryChannel,
   MessageFlags,
+  OverwriteType,
 } from 'discord.js';
 import { saveSnapshot } from '../storage.js';
-import type { ServerSnapshot, RoleSnapshot, ChannelSnapshot } from '../types.js';
+import type { ServerSnapshot, RoleSnapshot, ChannelSnapshot, PermissionOverwriteSnapshot } from '../types.js';
 
 export const data = new SlashCommandBuilder()
   .setName('copy-server')
-  .setDescription('Capture a full snapshot of this server (channels, roles, settings)')
+  .setDescription('Capture a full snapshot of this server (channels, roles, permissions, settings)')
   .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
   .addStringOption(opt =>
     opt
@@ -26,9 +27,8 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
   const snapshotName = interaction.options.getString('name', true).trim();
   const guild = interaction.guild;
-
   if (!guild) {
-    await interaction.editReply('❌ This command must be used inside a server.');
+    await interaction.editReply('❌ Este comando solo puede usarse dentro de un servidor.');
     return;
   }
 
@@ -37,7 +37,14 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     await fullGuild.roles.fetch();
     await fullGuild.channels.fetch();
 
-    // --- Roles ---
+    // Build role ID → name map (for serializing permission overwrites by name)
+    const roleIdToName = new Map<string, string>();
+    roleIdToName.set(fullGuild.roles.everyone.id, '@everyone');
+    for (const r of fullGuild.roles.cache.values()) {
+      roleIdToName.set(r.id, r.name);
+    }
+
+    // ── Roles ──────────────────────────────────────────────────────────────
     const roles: RoleSnapshot[] = fullGuild.roles.cache
       .filter(r => !r.managed && r.name !== '@everyone')
       .sort((a, b) => a.position - b.position)
@@ -50,7 +57,20 @@ export async function execute(interaction: ChatInputCommandInteraction) {
         position: r.position,
       }));
 
-    // --- Categories ---
+    // ── Helper: capture permission overwrites for a channel ─────────────────
+    function captureOverwrites(channel: GuildChannel): PermissionOverwriteSnapshot[] {
+      return channel.permissionOverwrites.cache.map(ow => ({
+        type: ow.type === OverwriteType.Role ? 'role' : 'member',
+        name:
+          ow.type === OverwriteType.Role
+            ? (roleIdToName.get(ow.id) ?? ow.id) // fall back to raw ID if role not found
+            : ow.id,                               // member: store user ID
+        allow: ow.allow.bitfield.toString(),
+        deny: ow.deny.bitfield.toString(),
+      }));
+    }
+
+    // ── Categories ──────────────────────────────────────────────────────────
     const categoriesRaw = fullGuild.channels.cache
       .filter((c): c is CategoryChannel => c.type === ChannelType.GuildCategory)
       .sort((a, b) => a.position - b.position);
@@ -60,10 +80,15 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     let idx = 0;
     for (const cat of categoriesRaw.values()) {
       categoryIndexMap.set(cat.id, idx++);
-      categories.push({ name: cat.name, type: cat.type, position: cat.position });
+      categories.push({
+        name: cat.name,
+        type: cat.type,
+        position: cat.position,
+        permissionOverwrites: captureOverwrites(cat),
+      });
     }
 
-    // --- Non-category channels ---
+    // ── Non-category channels ───────────────────────────────────────────────
     const channelTypes = new Set([
       ChannelType.GuildText,
       ChannelType.GuildVoice,
@@ -76,7 +101,12 @@ export async function execute(interaction: ChatInputCommandInteraction) {
       .filter((c): c is GuildChannel => channelTypes.has(c.type as ChannelType))
       .sort((a, b) => a.position - b.position)
       .map(c => {
-        const snap: ChannelSnapshot = { name: c.name, type: c.type, position: c.position };
+        const snap: ChannelSnapshot = {
+          name: c.name,
+          type: c.type,
+          position: c.position,
+          permissionOverwrites: captureOverwrites(c),
+        };
         if (c.parentId && categoryIndexMap.has(c.parentId)) {
           snap.parentIndex = categoryIndexMap.get(c.parentId);
         }
@@ -101,12 +131,12 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     saveSnapshot(snapshotName, snapshot);
 
     await interaction.editReply(
-      `✅ **"${fullGuild.name}"** snapshot saved as \`${snapshotName}\`!\n` +
-      `📋 Captured: **${roles.length}** roles · **${categories.length}** categories · **${channels.length}** channels\n` +
-      `Use \`/import-server name:${snapshotName}\` in another server to apply it.`
+      `✅ **"${fullGuild.name}"** guardado como \`${snapshotName}\`!\n` +
+      `📋 Capturado: **${roles.length}** roles · **${categories.length}** categorías · **${channels.length}** canales (con permisos)\n` +
+      `Usa \`/import-server name:${snapshotName}\` en otro servidor para aplicarlo.`
     );
   } catch (err) {
     console.error('[copy-server] Error:', err);
-    await interaction.editReply('❌ Failed to capture server. Make sure the bot has **Administrator** permission.');
+    await interaction.editReply('❌ No se pudo capturar el servidor. Asegúrate de que el bot tiene permiso de **Administrador**.');
   }
 }

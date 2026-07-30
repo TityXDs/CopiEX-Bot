@@ -6,8 +6,10 @@ import {
   PermissionFlagsBits,
   MessageFlags,
   GuildChannel,
+  Role,
 } from 'discord.js';
 import { loadSnapshot, listSnapshots } from '../storage.js';
+import type { ChannelSnapshot, PermissionOverwriteSnapshot } from '../types.js';
 
 export const data = new SlashCommandBuilder()
   .setName('import-server')
@@ -78,7 +80,6 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     return;
   }
 
-  // Acknowledge early — the channel will be deleted/modified soon
   try {
     await interaction.editReply(
       `⏳ Importando \`${snapshotName}\`…${useArchive ? ' Los canales actuales serán archivados.' : ''} Esto tomará un momento.`
@@ -92,39 +93,30 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     await guild.roles.fetch();
     await guild.channels.fetch();
 
+    // ── 1. Handle existing channels (archive or delete) ─────────────────────
     if (useArchive) {
-      // ── ARCHIVE MODE: move existing channels to a hidden category ────────────
       log('Archive mode: creating archive category…');
-
       const dateStr = new Date().toLocaleDateString('es-ES', {
         day: '2-digit', month: '2-digit', year: 'numeric',
       });
-
-      // Create the archive category — deny @everyone ViewChannel
-      // (Admins with the Administrator bit bypass channel overwrites automatically)
       const archiveCategory = await guild.channels.create({
         name: `📦 Archivo ${dateStr}`,
         type: ChannelType.GuildCategory,
         permissionOverwrites: [
-          {
-            id: guild.roles.everyone.id,
-            deny: [PermissionFlagsBits.ViewChannel],
-          },
+          { id: guild.roles.everyone.id, deny: [PermissionFlagsBits.ViewChannel] },
         ],
       });
 
-      // Move every non-category channel into the archive category
       log('Moving existing channels to archive…');
       const nonCategoryChannels = guild.channels.cache.filter(
         (c): c is GuildChannel =>
           c.type !== ChannelType.GuildCategory && c.id !== archiveCategory.id
       );
-
       for (const channel of nonCategoryChannels.values()) {
         try {
           await (channel as GuildChannel & { edit(opts: object): Promise<unknown> }).edit({
             parent: archiveCategory.id,
-            lockPermissions: false, // keep channel-level overwrites intact
+            lockPermissions: false,
           });
           await sleep(350);
         } catch (e) {
@@ -132,51 +124,101 @@ export async function execute(interaction: ChatInputCommandInteraction) {
         }
       }
 
-      // Delete existing categories (now empty)
       log('Removing old empty categories…');
       const oldCategories = guild.channels.cache.filter(
         c => c.type === ChannelType.GuildCategory && c.id !== archiveCategory.id
       );
       for (const cat of oldCategories.values()) {
-        try {
-          await cat.delete('Server import — archive mode');
-          await sleep(300);
-        } catch { /* skip if not deletable */ }
+        try { await cat.delete('Server import — archive mode'); await sleep(300); } catch { /* skip */ }
       }
-
     } else {
-      // ── DELETE MODE: remove all channels ─────────────────────────────────────
       log('Deleting existing channels…');
       for (const channel of guild.channels.cache.values()) {
-        try {
-          await channel.delete('Server import');
-          await sleep(350);
-        } catch { /* skip undeletable channels */ }
+        try { await channel.delete('Server import'); await sleep(350); } catch { /* skip */ }
       }
     }
 
-    // ── Delete non-managed, non-everyone roles ──────────────────────────────
+    // ── 2. Delete non-managed, non-everyone roles ───────────────────────────
     log('Deleting existing roles…');
     const deletableRoles = guild.roles.cache.filter(
       r => !r.managed && r.name !== '@everyone' && r.editable
     );
     for (const role of deletableRoles.values()) {
-      try {
-        await role.delete('Server import');
-        await sleep(350);
-      } catch { /* skip undeletable roles */ }
+      try { await role.delete('Server import'); await sleep(350); } catch { /* skip */ }
     }
 
-    // ── Create categories ───────────────────────────────────────────────────
+    // ── 3. Create roles (no position yet — we reorder after) ────────────────
+    // Creating in ascending position order so Discord stacks them correctly.
+    log(`Creating ${snapshot.roles.length} roles…`);
+    const createdRoles: Array<{ role: Role; desiredPosition: number }> = [];
+
+    for (const r of snapshot.roles) {
+      try {
+        const created = await guild.roles.create({
+          name: r.name,
+          color: r.color,
+          hoist: r.hoist,
+          mentionable: r.mentionable,
+          permissions: BigInt(r.permissions),
+          // No position here — Discord rejects positions above the bot's role
+        });
+        createdRoles.push({ role: created, desiredPosition: r.position });
+        await sleep(350);
+      } catch (e) {
+        console.error('[import-server] Failed to create role', r.name, e);
+      }
+    }
+
+    // Reorder roles to match original positions (relative order)
+    if (createdRoles.length > 0) {
+      try {
+        // Sort by desired position ascending and assign positions 1..N
+        createdRoles.sort((a, b) => a.desiredPosition - b.desiredPosition);
+        const positionData = createdRoles.map((entry, i) => ({
+          role: entry.role.id,
+          position: i + 1,
+        }));
+        await guild.roles.setPositions(positionData);
+        log('Roles reordered successfully.');
+      } catch (e) {
+        console.error('[import-server] Could not reorder roles (non-fatal):', e);
+      }
+    }
+
+    // ── 4. Build roleNameToId map for applying channel permissions ───────────
+    await guild.roles.fetch(); // refresh after creation
+    const roleNameToId = new Map<string, string>();
+    roleNameToId.set('@everyone', guild.roles.everyone.id);
+    for (const r of guild.roles.cache.values()) {
+      roleNameToId.set(r.name, r.id);
+    }
+
+    // Helper: convert stored overwrites back to Discord API format
+    function buildOverwrites(overwrites: PermissionOverwriteSnapshot[] | undefined) {
+      if (!overwrites?.length) return undefined;
+      return overwrites
+        .filter(o => o.type === 'role' && roleNameToId.has(o.name))
+        .map(o => ({
+          id: roleNameToId.get(o.name)!,
+          allow: BigInt(o.allow),
+          deny: BigInt(o.deny),
+        }));
+    }
+
+    // ── 5. Create categories ────────────────────────────────────────────────
     log('Creating categories…');
     const newCategoryIds: string[] = [];
     for (const cat of snapshot.categories) {
       try {
-        const created = await guild.channels.create({
+        const opts: Parameters<typeof guild.channels.create>[0] = {
           name: cat.name,
           type: ChannelType.GuildCategory,
           position: cat.position,
-        });
+        };
+        const overwrites = buildOverwrites(cat.permissionOverwrites);
+        if (overwrites?.length) opts.permissionOverwrites = overwrites;
+
+        const created = await guild.channels.create(opts);
         newCategoryIds.push(created.id);
         await sleep(400);
       } catch (e) {
@@ -185,49 +227,35 @@ export async function execute(interaction: ChatInputCommandInteraction) {
       }
     }
 
-    // ── Create channels ─────────────────────────────────────────────────────
+    // ── 6. Create channels ──────────────────────────────────────────────────
     log('Creating channels…');
     for (const ch of snapshot.channels) {
       try {
-        const options: Parameters<typeof guild.channels.create>[0] = {
+        const opts: Parameters<typeof guild.channels.create>[0] = {
           name: ch.name,
           type: ch.type as ChannelType,
           position: ch.position,
         };
         if (ch.parentIndex !== undefined && newCategoryIds[ch.parentIndex]) {
-          options.parent = newCategoryIds[ch.parentIndex];
+          opts.parent = newCategoryIds[ch.parentIndex];
         }
-        if (ch.topic) options.topic = ch.topic;
-        if (ch.nsfw) options.nsfw = ch.nsfw;
-        if (ch.rateLimitPerUser) options.rateLimitPerUser = ch.rateLimitPerUser;
-        if (ch.bitrate) options.bitrate = ch.bitrate;
-        if (ch.userLimit) options.userLimit = ch.userLimit;
-        await guild.channels.create(options);
+        if (ch.topic) opts.topic = ch.topic;
+        if (ch.nsfw) opts.nsfw = ch.nsfw;
+        if (ch.rateLimitPerUser) opts.rateLimitPerUser = ch.rateLimitPerUser;
+        if (ch.bitrate) opts.bitrate = ch.bitrate;
+        if (ch.userLimit) opts.userLimit = ch.userLimit;
+
+        const overwrites = buildOverwrites(ch.permissionOverwrites);
+        if (overwrites?.length) opts.permissionOverwrites = overwrites;
+
+        await guild.channels.create(opts);
         await sleep(400);
       } catch (e) {
         console.error('[import-server] Failed to create channel', ch.name, e);
       }
     }
 
-    // ── Create roles ────────────────────────────────────────────────────────
-    log('Creating roles…');
-    for (const r of snapshot.roles) {
-      try {
-        await guild.roles.create({
-          name: r.name,
-          color: r.color,
-          hoist: r.hoist,
-          mentionable: r.mentionable,
-          permissions: BigInt(r.permissions),
-          position: r.position,
-        });
-        await sleep(400);
-      } catch (e) {
-        console.error('[import-server] Failed to create role', r.name, e);
-      }
-    }
-
-    // ── Update guild info ───────────────────────────────────────────────────
+    // ── 7. Update guild info ────────────────────────────────────────────────
     log('Updating server name and description…');
     const guildEdit: Parameters<typeof guild.edit>[0] = { name: snapshot.name };
     if (snapshot.description) guildEdit.description = snapshot.description;
@@ -240,7 +268,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
           const ext = snapshot.iconURL.includes('.png') ? 'png' : 'jpeg';
           guildEdit.icon = `data:image/${ext};base64,${Buffer.from(buf).toString('base64')}`;
         }
-      } catch { log('⚠️ Could not download server icon — skipping.'); }
+      } catch { log('⚠️ No se pudo descargar el icono del servidor — se omite.'); }
     }
 
     await guild.edit(guildEdit);
@@ -248,25 +276,21 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
     const resultMsg =
       `✅ **Servidor importado desde \`${snapshotName}\`!**\n` +
-      `📋 Aplicado: **${snapshot.roles.length}** roles · **${snapshot.categories.length}** categorías · **${snapshot.channels.length}** canales\n` +
+      `📋 Aplicado: **${snapshot.roles.length}** roles · **${snapshot.categories.length}** categorías · **${snapshot.channels.length}** canales (con permisos)\n` +
       (useArchive ? `📦 Los canales anteriores fueron archivados en **"📦 Archivo"** (solo visible para admins)\n` : '') +
       `🕐 Snapshot capturado: ${new Date(snapshot.capturedAt).toLocaleString()}`;
 
-    // The original channel is gone — DM the user or post in a new channel
     try {
       await interaction.user.send(resultMsg);
     } catch {
       await guild.channels.fetch();
       const textChannel = guild.channels.cache.find(c => c.type === ChannelType.GuildText);
-      if (textChannel?.isTextBased()) {
-        await textChannel.send(resultMsg);
-      }
+      if (textChannel?.isTextBased()) await textChannel.send(resultMsg);
     }
 
   } catch (err) {
     console.error('[import-server] Fatal error:', err);
-    const errMsg =
-      '❌ El import falló. Asegúrate de que el bot tiene permiso de **Administrador** y su rol está arriba de todos los demás en la lista de roles.';
+    const errMsg = '❌ El import falló. Asegúrate de que el bot tiene permiso de **Administrador** y su rol está arriba de todos los demás.';
     try { await interaction.user.send(errMsg); } catch { /* best effort */ }
   }
 }
