@@ -10,6 +10,7 @@
 import { REST, Routes } from 'discord.js';
 import * as copyServer from './commands/copy-server.js';
 import * as importServer from './commands/import-server.js';
+import * as deleteSnapshot from './commands/delete-snapshot.js';
 
 const TOKEN = process.env.DISCORD_TOKEN;
 const CLIENT_ID = process.env.DISCORD_CLIENT_ID;
@@ -20,7 +21,7 @@ if (!TOKEN || !CLIENT_ID) {
   process.exit(1);
 }
 
-const commands = [copyServer.data.toJSON(), importServer.data.toJSON()];
+const commands = [copyServer.data.toJSON(), importServer.data.toJSON(), deleteSnapshot.data.toJSON()];
 
 const rest = new REST().setToken(TOKEN);
 

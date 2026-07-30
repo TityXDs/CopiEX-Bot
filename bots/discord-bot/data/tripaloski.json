@@ -1,0 +1,56 @@
+{
+  "name": "Tripaloski",
+  "roles": [],
+  "categories": [
+    {
+      "name": "Canales de texto",
+      "type": 4,
+      "position": 0
+    },
+    {
+      "name": "Canales de voz",
+      "type": 4,
+      "position": 1
+    }
+  ],
+  "channels": [
+    {
+      "name": "general",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 0
+    },
+    {
+      "name": "General",
+      "type": 2,
+      "position": 0,
+      "parentIndex": 1,
+      "bitrate": 64000
+    },
+    {
+      "name": "si-ves-esto-en-placeholder-funciona-el-bot",
+      "type": 0,
+      "position": 1,
+      "parentIndex": 0
+    },
+    {
+      "name": "si-ves-esto-en-placeholder-funciona-el-bot",
+      "type": 0,
+      "position": 2,
+      "parentIndex": 0
+    },
+    {
+      "name": "si-ves-esto-en-placeholder-funciona-el-bot",
+      "type": 0,
+      "position": 3,
+      "parentIndex": 0
+    },
+    {
+      "name": "si-ves-esto-en-placeholder-funciona-el-bot",
+      "type": 0,
+      "position": 4,
+      "parentIndex": 0
+    }
+  ],
+  "capturedAt": "2026-07-30T22:46:52.649Z"
+}

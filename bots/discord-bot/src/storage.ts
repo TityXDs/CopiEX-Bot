@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, unlinkSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { ServerSnapshot } from './types.js';
@@ -36,4 +36,11 @@ export function listSnapshots(): string[] {
   return readdirSync(DATA_DIR)
     .filter(f => f.endsWith('.json'))
     .map(f => f.replace('.json', ''));
+}
+
+export function deleteSnapshot(name: string): boolean {
+  const path = snapshotPath(name);
+  if (!existsSync(path)) return false;
+  unlinkSync(path);
+  return true;
 }

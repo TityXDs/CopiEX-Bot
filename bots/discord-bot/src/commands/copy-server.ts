@@ -5,6 +5,7 @@ import {
   PermissionFlagsBits,
   GuildChannel,
   CategoryChannel,
+  MessageFlags,
 } from 'discord.js';
 import { saveSnapshot } from '../storage.js';
 import type { ServerSnapshot, RoleSnapshot, ChannelSnapshot } from '../types.js';
@@ -21,7 +22,7 @@ export const data = new SlashCommandBuilder()
   );
 
 export async function execute(interaction: ChatInputCommandInteraction) {
-  await interaction.deferReply({ ephemeral: true });
+  await interaction.deferReply({ flags: MessageFlags.Ephemeral });
 
   const snapshotName = interaction.options.getString('name', true).trim();
   const guild = interaction.guild;
@@ -32,7 +33,6 @@ export async function execute(interaction: ChatInputCommandInteraction) {
   }
 
   try {
-    // Fetch full guild data
     const fullGuild = await guild.fetch();
     await fullGuild.roles.fetch();
     await fullGuild.channels.fetch();
@@ -60,11 +60,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     let idx = 0;
     for (const cat of categoriesRaw.values()) {
       categoryIndexMap.set(cat.id, idx++);
-      categories.push({
-        name: cat.name,
-        type: cat.type,
-        position: cat.position,
-      });
+      categories.push({ name: cat.name, type: cat.type, position: cat.position });
     }
 
     // --- Non-category channels ---
@@ -80,24 +76,15 @@ export async function execute(interaction: ChatInputCommandInteraction) {
       .filter((c): c is GuildChannel => channelTypes.has(c.type as ChannelType))
       .sort((a, b) => a.position - b.position)
       .map(c => {
-        const snap: ChannelSnapshot = {
-          name: c.name,
-          type: c.type,
-          position: c.position,
-        };
-
+        const snap: ChannelSnapshot = { name: c.name, type: c.type, position: c.position };
         if (c.parentId && categoryIndexMap.has(c.parentId)) {
           snap.parentIndex = categoryIndexMap.get(c.parentId);
         }
-
         if ('topic' in c && c.topic) snap.topic = c.topic;
         if ('nsfw' in c && c.nsfw) snap.nsfw = c.nsfw;
-        if ('rateLimitPerUser' in c && c.rateLimitPerUser) {
-          snap.rateLimitPerUser = c.rateLimitPerUser;
-        }
+        if ('rateLimitPerUser' in c && c.rateLimitPerUser) snap.rateLimitPerUser = c.rateLimitPerUser;
         if ('bitrate' in c && c.bitrate) snap.bitrate = c.bitrate;
         if ('userLimit' in c && c.userLimit) snap.userLimit = c.userLimit;
-
         return snap;
       });
 
