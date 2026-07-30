@@ -1,45 +1,55 @@
-# [Project name]
+# CopiEX — Discord Server Clone Bot
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A Discord bot that snapshots a server's full configuration (channels, roles, name, icon, description) and applies it to another server.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- `pnpm --filter @workspace/discord-bot run dev` — start the bot (via the "Discord Bot" workflow)
+- `pnpm --filter @workspace/discord-bot run deploy` — register slash commands with Discord (run once after changes)
+- `pnpm --filter @workspace/discord-bot run typecheck` — typecheck the bot
+
+## Bot Commands
+
+| Command | Description |
+|---|---|
+| `/copy-server name:<label>` | Snapshots the current server and saves it under `<label>` |
+| `/import-server name:<label> confirm:CONFIRM` | Applies a saved snapshot to the current server (destructive) |
+
+Both commands require **Administrator** permission.
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Discord.js v14
+- Snapshots stored as JSON in `bots/discord-bot/data/`
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- Bot entry point: `bots/discord-bot/src/index.ts`
+- Commands: `bots/discord-bot/src/commands/`
+- Snapshot storage: `bots/discord-bot/src/storage.ts`
+- Snapshot data: `bots/discord-bot/data/` (auto-created, gitignore if needed)
+- Command registration script: `bots/discord-bot/src/deploy-commands.ts`
+
+## Required Secrets
+
+- `DISCORD_TOKEN` — bot token (Discord Developer Portal → Bot)
+- `DISCORD_CLIENT_ID` — application client ID (Discord Developer Portal → General Information)
+- `DISCORD_GUILD_ID` *(optional)* — set for instant guild-specific command registration instead of global
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
-
-## Product
-
-_Describe the high-level user-facing capabilities of this app once they exist._
-
-## User preferences
-
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Snapshots are plain JSON files keyed by a user-chosen label, stored locally in `data/`
+- Import is destructive by design: deletes all existing channels and non-managed roles before recreating from the snapshot. Requires typing `CONFIRM` to prevent accidents
+- A 300–400ms delay between Discord API calls avoids rate-limiting during bulk operations
+- Icon is fetched from the saved URL at import time and re-uploaded as base64
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Global command registration takes up to 1 hour to propagate. Set `DISCORD_GUILD_ID` for instant registration during testing.
+- The bot's role must be at the top of the role list in the target server, or it won't be able to create roles above its own position.
+- Managed roles (e.g. bot roles, Nitro booster) are never deleted or recreated — they're skipped automatically.
 
-## Pointers
+## User preferences
 
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+_Populate as you build._
