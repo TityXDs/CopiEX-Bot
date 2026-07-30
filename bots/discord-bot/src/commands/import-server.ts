@@ -5,12 +5,13 @@ import {
   ChannelType,
   PermissionFlagsBits,
   MessageFlags,
+  GuildChannel,
 } from 'discord.js';
 import { loadSnapshot, listSnapshots } from '../storage.js';
 
 export const data = new SlashCommandBuilder()
   .setName('import-server')
-  .setDescription('Apply a saved server snapshot to this server (DESTRUCTIVE — replaces channels & roles)')
+  .setDescription('Apply a saved server snapshot to this server')
   .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
   .addStringOption(opt =>
     opt
@@ -22,8 +23,16 @@ export const data = new SlashCommandBuilder()
   .addStringOption(opt =>
     opt
       .setName('confirm')
-      .setDescription('Type CONFIRM to proceed (this will delete existing channels and roles)')
+      .setDescription('Type CONFIRM to proceed')
       .setRequired(true)
+  )
+  .addBooleanOption(opt =>
+    opt
+      .setName('archive')
+      .setDescription(
+        'Archive existing channels into a hidden folder (visible only to admins) instead of deleting them'
+      )
+      .setRequired(false)
   );
 
 export async function autocomplete(interaction: AutocompleteInteraction) {
@@ -39,10 +48,11 @@ export async function autocomplete(interaction: AutocompleteInteraction) {
 export async function execute(interaction: ChatInputCommandInteraction) {
   const snapshotName = interaction.options.getString('name', true).trim();
   const confirm = interaction.options.getString('confirm', true);
+  const useArchive = interaction.options.getBoolean('archive') ?? false;
 
   if (confirm !== 'CONFIRM') {
     await interaction.reply({
-      content: '❌ You must type exactly `CONFIRM` in the confirm field to proceed.',
+      content: '❌ Escribe exactamente `CONFIRM` en el campo de confirmación para continuar.',
       flags: MessageFlags.Ephemeral,
     });
     return;
@@ -52,7 +62,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
 
   const guild = interaction.guild;
   if (!guild) {
-    await interaction.editReply('❌ This command must be used inside a server.');
+    await interaction.editReply('❌ Este comando solo puede usarse dentro de un servidor.');
     return;
   }
 
@@ -60,40 +70,92 @@ export async function execute(interaction: ChatInputCommandInteraction) {
   if (!snapshot) {
     const available = listSnapshots();
     await interaction.editReply(
-      `❌ Snapshot \`${snapshotName}\` not found.\n` +
+      `❌ No se encontró el snapshot \`${snapshotName}\`.\n` +
       (available.length
-        ? `Available snapshots: ${available.map(s => `\`${s}\``).join(', ')}`
-        : 'No snapshots saved yet. Use `/copy-server` first.')
+        ? `Snapshots disponibles: ${available.map(s => `\`${s}\``).join(', ')}`
+        : 'No hay snapshots guardados. Usa `/copy-server` primero.')
     );
     return;
   }
 
-  // Try to acknowledge the user early since the channel will get deleted
+  // Acknowledge early — the channel will be deleted/modified soon
   try {
     await interaction.editReply(
-      `⏳ Importing \`${snapshotName}\`… This will take a moment. The server will be restructured.`
+      `⏳ Importando \`${snapshotName}\`…${useArchive ? ' Los canales actuales serán archivados.' : ''} Esto tomará un momento.`
     );
-  } catch { /* channel may be deleted before we can reply — that's OK */ }
+  } catch { /* channel may vanish — that's OK */ }
 
   const log = (msg: string) => console.log(`[import-server] ${msg}`);
-
-  let success = false;
 
   try {
     await guild.fetch();
     await guild.roles.fetch();
     await guild.channels.fetch();
 
-    // ── 1. Delete non-system channels ────────────────────────────────────────
-    log('Deleting existing channels…');
-    for (const channel of guild.channels.cache.values()) {
-      try {
-        await channel.delete('Server import');
-        await sleep(350);
-      } catch { /* skip undeletable channels */ }
+    if (useArchive) {
+      // ── ARCHIVE MODE: move existing channels to a hidden category ────────────
+      log('Archive mode: creating archive category…');
+
+      const dateStr = new Date().toLocaleDateString('es-ES', {
+        day: '2-digit', month: '2-digit', year: 'numeric',
+      });
+
+      // Create the archive category — deny @everyone ViewChannel
+      // (Admins with the Administrator bit bypass channel overwrites automatically)
+      const archiveCategory = await guild.channels.create({
+        name: `📦 Archivo ${dateStr}`,
+        type: ChannelType.GuildCategory,
+        permissionOverwrites: [
+          {
+            id: guild.roles.everyone.id,
+            deny: [PermissionFlagsBits.ViewChannel],
+          },
+        ],
+      });
+
+      // Move every non-category channel into the archive category
+      log('Moving existing channels to archive…');
+      const nonCategoryChannels = guild.channels.cache.filter(
+        (c): c is GuildChannel =>
+          c.type !== ChannelType.GuildCategory && c.id !== archiveCategory.id
+      );
+
+      for (const channel of nonCategoryChannels.values()) {
+        try {
+          await (channel as GuildChannel & { edit(opts: object): Promise<unknown> }).edit({
+            parent: archiveCategory.id,
+            lockPermissions: false, // keep channel-level overwrites intact
+          });
+          await sleep(350);
+        } catch (e) {
+          console.error('[import-server] Could not move channel to archive:', channel.name, e);
+        }
+      }
+
+      // Delete existing categories (now empty)
+      log('Removing old empty categories…');
+      const oldCategories = guild.channels.cache.filter(
+        c => c.type === ChannelType.GuildCategory && c.id !== archiveCategory.id
+      );
+      for (const cat of oldCategories.values()) {
+        try {
+          await cat.delete('Server import — archive mode');
+          await sleep(300);
+        } catch { /* skip if not deletable */ }
+      }
+
+    } else {
+      // ── DELETE MODE: remove all channels ─────────────────────────────────────
+      log('Deleting existing channels…');
+      for (const channel of guild.channels.cache.values()) {
+        try {
+          await channel.delete('Server import');
+          await sleep(350);
+        } catch { /* skip undeletable channels */ }
+      }
     }
 
-    // ── 2. Delete non-managed, non-everyone roles ─────────────────────────────
+    // ── Delete non-managed, non-everyone roles ──────────────────────────────
     log('Deleting existing roles…');
     const deletableRoles = guild.roles.cache.filter(
       r => !r.managed && r.name !== '@everyone' && r.editable
@@ -105,7 +167,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
       } catch { /* skip undeletable roles */ }
     }
 
-    // ── 3. Create categories ──────────────────────────────────────────────────
+    // ── Create categories ───────────────────────────────────────────────────
     log('Creating categories…');
     const newCategoryIds: string[] = [];
     for (const cat of snapshot.categories) {
@@ -123,7 +185,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
       }
     }
 
-    // ── 4. Create channels ────────────────────────────────────────────────────
+    // ── Create channels ─────────────────────────────────────────────────────
     log('Creating channels…');
     for (const ch of snapshot.channels) {
       try {
@@ -147,7 +209,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
       }
     }
 
-    // ── 5. Create roles ───────────────────────────────────────────────────────
+    // ── Create roles ────────────────────────────────────────────────────────
     log('Creating roles…');
     for (const r of snapshot.roles) {
       try {
@@ -165,7 +227,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
       }
     }
 
-    // ── 6. Update guild info ──────────────────────────────────────────────────
+    // ── Update guild info ───────────────────────────────────────────────────
     log('Updating server name and description…');
     const guildEdit: Parameters<typeof guild.edit>[0] = { name: snapshot.name };
     if (snapshot.description) guildEdit.description = snapshot.description;
@@ -178,38 +240,34 @@ export async function execute(interaction: ChatInputCommandInteraction) {
           const ext = snapshot.iconURL.includes('.png') ? 'png' : 'jpeg';
           guildEdit.icon = `data:image/${ext};base64,${Buffer.from(buf).toString('base64')}`;
         }
-      } catch { log('⚠️  Could not download server icon — skipping.'); }
+      } catch { log('⚠️ Could not download server icon — skipping.'); }
     }
 
     await guild.edit(guildEdit);
-    success = true;
     log('Import complete!');
 
-    // Try to DM the user with the result (the channel they used is gone)
     const resultMsg =
-      `✅ **Server imported from \`${snapshotName}\`!**\n` +
-      `📋 Applied: **${snapshot.roles.length}** roles · **${snapshot.categories.length}** categories · **${snapshot.channels.length}** channels\n` +
-      `🕐 Snapshot captured: ${new Date(snapshot.capturedAt).toLocaleString()}`;
+      `✅ **Servidor importado desde \`${snapshotName}\`!**\n` +
+      `📋 Aplicado: **${snapshot.roles.length}** roles · **${snapshot.categories.length}** categorías · **${snapshot.channels.length}** canales\n` +
+      (useArchive ? `📦 Los canales anteriores fueron archivados en **"📦 Archivo"** (solo visible para admins)\n` : '') +
+      `🕐 Snapshot capturado: ${new Date(snapshot.capturedAt).toLocaleString()}`;
 
+    // The original channel is gone — DM the user or post in a new channel
     try {
       await interaction.user.send(resultMsg);
     } catch {
-      // DMs disabled — try to post in any available text channel
       await guild.channels.fetch();
       const textChannel = guild.channels.cache.find(c => c.type === ChannelType.GuildText);
-      if (textChannel && textChannel.isTextBased()) {
+      if (textChannel?.isTextBased()) {
         await textChannel.send(resultMsg);
       }
     }
 
   } catch (err) {
     console.error('[import-server] Fatal error:', err);
-    const errMsg = '❌ Import failed partway through. Make sure the bot has **Administrator** permission and its role is at the top of the role list.';
-    try {
-      await interaction.user.send(errMsg);
-    } catch {
-      // best effort — nothing more we can do
-    }
+    const errMsg =
+      '❌ El import falló. Asegúrate de que el bot tiene permiso de **Administrador** y su rol está arriba de todos los demás en la lista de roles.';
+    try { await interaction.user.send(errMsg); } catch { /* best effort */ }
   }
 }
 

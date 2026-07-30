@@ -1,0 +1,945 @@
+{
+  "name": "♈𝖀𝖓𝖎𝖛𝖊𝖗𝖘𝖆𝖑 𝕽𝖚𝖕𝖙𝖚𝖗𝖊 (Community Server)",
+  "description": "𝙰𝚗 𝚊𝚜𝚢𝚖𝚖𝚎𝚝𝚛𝚒𝚌𝚊𝚕 𝚑𝚘𝚛𝚛𝚘𝚛 𝚐𝚊𝚖𝚎 𝚠𝚒𝚝𝚑 𝚊 𝚜𝚎𝚝𝚝𝚒𝚗𝚐 𝚒𝚗𝚜𝚙𝚒𝚛𝚎𝚍 𝚋𝚢 𝚕𝚒𝚖𝚒𝚗𝚊𝚕 𝚜𝚙𝚊𝚌𝚎𝚜 𝚊𝚗𝚍 𝚊 𝚝𝚘𝚞𝚌𝚑 𝚘𝚏 𝚑𝚘𝚛𝚛𝚘𝚛 𝚏𝚒𝚕𝚖𝚜, 𝚠𝚑𝚎𝚛𝚎 𝚑𝚘𝚛𝚛𝚘𝚛 𝚌𝚑𝚊𝚛𝚊𝚌𝚝𝚎𝚛𝚜 𝚏𝚛𝚘𝚖 𝚌𝚛𝚎𝚎𝚙𝚢𝚙𝚊𝚜𝚝𝚊𝚜, 𝙾𝙲𝚜, 𝚘𝚛 𝚘𝚝𝚑𝚎𝚛 𝚖𝚎𝚍𝚒𝚊.",
+  "iconURL": "https://cdn.discordapp.com/icons/1454837637394337988/5468239bd176c65376e13d91d52dfc55.webp?size=256",
+  "roles": [
+    {
+      "name": "📍Allied",
+      "color": 15277667,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "1720707884371521",
+      "position": 2
+    },
+    {
+      "name": "Miembros 67",
+      "color": 0,
+      "hoist": false,
+      "mentionable": true,
+      "permissions": "0",
+      "position": 3
+    },
+    {
+      "name": "amante de las pollas",
+      "color": 1752220,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 4
+    },
+    {
+      "name": "nuevo rol",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 9
+    },
+    {
+      "name": "nuevo rol",
+      "color": 10038562,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 10
+    },
+    {
+      "name": "*",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 11
+    },
+    {
+      "name": "- 🕴Level🕴 -",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 12
+    },
+    {
+      "name": "Lvl 5 - U.R Fan",
+      "color": 132383,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 13
+    },
+    {
+      "name": "Lvl 10 - Noob Player",
+      "color": 15844367,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 14
+    },
+    {
+      "name": "Lvl 20 - Good Player",
+      "color": 2067276,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 15
+    },
+    {
+      "name": "Lvl 25 - Big U.R Fan",
+      "color": 3066993,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 16
+    },
+    {
+      "name": "Lvl 30 - Tryhard Player",
+      "color": 15105570,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 17
+    },
+    {
+      "name": "Lvl 35 - Darkness Minion",
+      "color": 2633781,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 18
+    },
+    {
+      "name": "Lvl 40 - ...",
+      "color": 334376,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 19
+    },
+    {
+      "name": "Lvl 45 - h...e.l.l",
+      "color": 15158332,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 20
+    },
+    {
+      "name": "Lvl ?? - Dærkne§§ Itself",
+      "color": 66824,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 21
+    },
+    {
+      "name": "- 🤠Member🤠 -",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 22
+    },
+    {
+      "name": "Muted",
+      "color": 8487814,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "2221707229513281",
+      "position": 23
+    },
+    {
+      "name": "Unverified",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 24
+    },
+    {
+      "name": "😡Unverified",
+      "color": 15277667,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 25
+    },
+    {
+      "name": "👶Member",
+      "color": 15844367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "1694250818719297",
+      "position": 26
+    },
+    {
+      "name": "❇️Verified",
+      "color": 3066993,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 27
+    },
+    {
+      "name": "🔥Active",
+      "color": 16742144,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 28
+    },
+    {
+      "name": "😏Dumb",
+      "color": 3066993,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 29
+    },
+    {
+      "name": "- 🦠Extra🦠 -",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 30
+    },
+    {
+      "name": "DEV INUTIL",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 31
+    },
+    {
+      "name": "📣Sub Announcement Ping",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 32
+    },
+    {
+      "name": "🔄 Updates Ping",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 33
+    },
+    {
+      "name": "📺Videos Ping",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 34
+    },
+    {
+      "name": "🗺️ Mapas Ping",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 35
+    },
+    {
+      "name": "🔪😖 Survivor & Killer Ping",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 36
+    },
+    {
+      "name": "🤖Bots",
+      "color": 4539975,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 37
+    },
+    {
+      "name": "👀Leaks Ping",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 38
+    },
+    {
+      "name": "🧵Random Post Ping",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 39
+    },
+    {
+      "name": "🛑Announcement Ping",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 40
+    },
+    {
+      "name": "🤡Fetuchini Raid (EXCLUSIVE APRIL FOOLS)",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 41
+    },
+    {
+      "name": "♈Collaber",
+      "color": 10181046,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 42
+    },
+    {
+      "name": "🟥Content Creator",
+      "color": 16713483,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 43
+    },
+    {
+      "name": "- 🌐Creative Team🌐 -",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 45
+    },
+    {
+      "name": "🎶Musico",
+      "color": 10181046,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 46
+    },
+    {
+      "name": "🦈Animator",
+      "color": 6323595,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 47
+    },
+    {
+      "name": "🗣️Voice Actor",
+      "color": 2067276,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 48
+    },
+    {
+      "name": "🎨Artist",
+      "color": 15277667,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 49
+    },
+    {
+      "name": "👩‍🎨MEGA ARTIST",
+      "color": 11342935,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 50
+    },
+    {
+      "name": "🔨Developer",
+      "color": 7419530,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 51
+    },
+    {
+      "name": "⚒️Staff Team",
+      "color": 1752220,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 52
+    },
+    {
+      "name": "🚏Scripter",
+      "color": 15158332,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "1721807559716807",
+      "position": 53
+    },
+    {
+      "name": "🗿Modelador",
+      "color": 2886154,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 54
+    },
+    {
+      "name": "🔯Staff",
+      "color": 7419530,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "1713011466686407",
+      "position": 55
+    },
+    {
+      "name": "🎫Ticket Staff",
+      "color": 3447003,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 56
+    },
+    {
+      "name": "🌟Admin",
+      "color": 15105570,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 57
+    },
+    {
+      "name": "🧑‍✈️Director",
+      "color": 5518861,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "1721826619162615",
+      "position": 58
+    },
+    {
+      "name": "🍁Founder",
+      "color": 11292672,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 59
+    },
+    {
+      "name": "- 🤖Bots🤖 -",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 60
+    }
+  ],
+  "categories": [
+    {
+      "name": "Member Count",
+      "type": 4,
+      "position": 0
+    },
+    {
+      "name": "Sotano de los admins",
+      "type": 4,
+      "position": 1
+    },
+    {
+      "name": "📌｜ Welcome",
+      "type": 4,
+      "position": 2
+    },
+    {
+      "name": "❗｜ Advertisements",
+      "type": 4,
+      "position": 3
+    },
+    {
+      "name": "🦈｜Game Development",
+      "type": 4,
+      "position": 4
+    },
+    {
+      "name": "👀 I EXTRAS",
+      "type": 4,
+      "position": 5
+    },
+    {
+      "name": "🟥Youtube",
+      "type": 4,
+      "position": 6
+    },
+    {
+      "name": "🛠️ | Soporte",
+      "type": 4,
+      "position": 7
+    },
+    {
+      "name": "🌐｜Lobby",
+      "type": 4,
+      "position": 8
+    },
+    {
+      "name": "🌶️｜Chill",
+      "type": 4,
+      "position": 9
+    },
+    {
+      "name": "❓｜Other",
+      "type": 4,
+      "position": 10
+    },
+    {
+      "name": "🗣️｜Voice Chat",
+      "type": 4,
+      "position": 11
+    },
+    {
+      "name": "guardado",
+      "type": 4,
+      "position": 12
+    },
+    {
+      "name": "Actuaciones",
+      "type": 4,
+      "position": 13
+    }
+  ],
+  "channels": [
+    {
+      "name": "🔯｜sotano-admin",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 1
+    },
+    {
+      "name": "voces",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 13
+    },
+    {
+      "name": "🗂️｜suggestions",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 7
+    },
+    {
+      "name": "Channel Count: 63",
+      "type": 2,
+      "position": 0,
+      "parentIndex": 0,
+      "bitrate": 64000
+    },
+    {
+      "name": "ticket-1",
+      "type": 0,
+      "position": 0,
+      "topic": "1048378293386235974"
+    },
+    {
+      "name": "Asd voz",
+      "type": 13,
+      "position": 0,
+      "parentIndex": 13,
+      "bitrate": 64000,
+      "userLimit": 10000
+    },
+    {
+      "name": "📣｜official-networks",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 3
+    },
+    {
+      "name": "🗽｜english-chat",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 8
+    },
+    {
+      "name": "🐬｜information",
+      "type": 5,
+      "position": 0,
+      "parentIndex": 4
+    },
+    {
+      "name": "🔥｜welcome",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 2
+    },
+    {
+      "name": "🔢｜contacion",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 10
+    },
+    {
+      "name": "🦨｜Directos",
+      "type": 13,
+      "position": 0,
+      "parentIndex": 3,
+      "bitrate": 64000,
+      "userLimit": 10000
+    },
+    {
+      "name": "😢｜leaving",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 12
+    },
+    {
+      "name": "🧻｜reglas",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 0
+    },
+    {
+      "name": "🔊｜Voice Chat Creator",
+      "type": 2,
+      "position": 0,
+      "parentIndex": 11,
+      "bitrate": 64000
+    },
+    {
+      "name": "💡｜portfolio",
+      "type": 15,
+      "position": 0,
+      "parentIndex": 5,
+      "topic": "-seriedad\n- mostrar cosas de tu trabajo"
+    },
+    {
+      "name": "🎨｜art",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 9,
+      "topic": "Arte de la comunidad/Art of the community\n--------------------------------------------\nNo nsfw o gore"
+    },
+    {
+      "name": "🟥｜oficial-youtube",
+      "type": 0,
+      "position": 0,
+      "parentIndex": 6
+    },
+    {
+      "name": "❇️｜verify",
+      "type": 0,
+      "position": 1,
+      "parentIndex": 2
+    },
+    {
+      "name": "🎟️｜tickets",
+      "type": 0,
+      "position": 1,
+      "parentIndex": 7
+    },
+    {
+      "name": "📣｜game-news",
+      "type": 0,
+      "position": 1,
+      "parentIndex": 3,
+      "topic": "NEWS FOR THE GAME"
+    },
+    {
+      "name": "👻｜memes",
+      "type": 0,
+      "position": 1,
+      "parentIndex": 9
+    },
+    {
+      "name": "🧩｜miscellaneous",
+      "type": 5,
+      "position": 1,
+      "parentIndex": 5
+    },
+    {
+      "name": "📺｜community-videos",
+      "type": 0,
+      "position": 1,
+      "parentIndex": 6
+    },
+    {
+      "name": "👨‍💼｜collabs",
+      "type": 5,
+      "position": 1,
+      "parentIndex": 4
+    },
+    {
+      "name": "Member Count: 168",
+      "type": 2,
+      "position": 1,
+      "parentIndex": 0,
+      "bitrate": 64000
+    },
+    {
+      "name": "🔢｜count",
+      "type": 0,
+      "position": 1,
+      "parentIndex": 10
+    },
+    {
+      "name": "🐒｜admins-jueguitos",
+      "type": 0,
+      "position": 1,
+      "parentIndex": 1
+    },
+    {
+      "name": "🎮｜Gaming",
+      "type": 2,
+      "position": 1,
+      "parentIndex": 11,
+      "bitrate": 64000
+    },
+    {
+      "name": "🌮｜chat-español",
+      "type": 0,
+      "position": 1,
+      "parentIndex": 8
+    },
+    {
+      "name": "Role Count: 75",
+      "type": 2,
+      "position": 2,
+      "parentIndex": 0,
+      "bitrate": 64000
+    },
+    {
+      "name": "🍜｜西班牙語聊天",
+      "type": 0,
+      "position": 2,
+      "parentIndex": 8
+    },
+    {
+      "name": "🎮｜games",
+      "type": 0,
+      "position": 2,
+      "parentIndex": 9
+    },
+    {
+      "name": "🔨｜desarrollo-chat",
+      "type": 0,
+      "position": 2,
+      "parentIndex": 1
+    },
+    {
+      "name": "🙌｜10 People",
+      "type": 2,
+      "position": 2,
+      "parentIndex": 11,
+      "bitrate": 64000,
+      "userLimit": 10
+    },
+    {
+      "name": "🤼｜requisitos",
+      "type": 0,
+      "position": 2,
+      "parentIndex": 6
+    },
+    {
+      "name": "😎｜survivors-roster",
+      "type": 5,
+      "position": 2,
+      "parentIndex": 5
+    },
+    {
+      "name": "📣｜devteam-news",
+      "type": 0,
+      "position": 2,
+      "parentIndex": 3
+    },
+    {
+      "name": "📈｜levels",
+      "type": 0,
+      "position": 2,
+      "parentIndex": 2
+    },
+    {
+      "name": "👨‍💼｜alianza",
+      "type": 5,
+      "position": 2,
+      "parentIndex": 4
+    },
+    {
+      "name": "💡｜ideas",
+      "type": 15,
+      "position": 3,
+      "parentIndex": 8,
+      "topic": "Brains from the community"
+    },
+    {
+      "name": "🦈｜comands",
+      "type": 0,
+      "position": 3,
+      "parentIndex": 9
+    },
+    {
+      "name": "👀｜leaks",
+      "type": 5,
+      "position": 3,
+      "parentIndex": 4
+    },
+    {
+      "name": "🔪｜monsters-roster",
+      "type": 5,
+      "position": 3,
+      "parentIndex": 5
+    },
+    {
+      "name": "📣｜server-news",
+      "type": 0,
+      "position": 3,
+      "parentIndex": 3
+    },
+    {
+      "name": "👻｜logs",
+      "type": 0,
+      "position": 3,
+      "parentIndex": 1
+    },
+    {
+      "name": "🖐｜5 People",
+      "type": 2,
+      "position": 3,
+      "parentIndex": 11,
+      "bitrate": 64000,
+      "userLimit": 5
+    },
+    {
+      "name": "🗣️｜Chilleando Voz",
+      "type": 2,
+      "position": 4,
+      "parentIndex": 11,
+      "bitrate": 64000
+    },
+    {
+      "name": "🔘｜polls",
+      "type": 0,
+      "position": 4,
+      "parentIndex": 5
+    },
+    {
+      "name": "🎪｜prueba",
+      "type": 0,
+      "position": 4,
+      "parentIndex": 1
+    },
+    {
+      "name": "🔪｜monsters",
+      "type": 5,
+      "position": 4,
+      "parentIndex": 4
+    },
+    {
+      "name": "🎶｜music",
+      "type": 0,
+      "position": 4,
+      "parentIndex": 9
+    },
+    {
+      "name": "🤺｜projects-foro",
+      "type": 15,
+      "position": 4,
+      "parentIndex": 8
+    },
+    {
+      "name": "👤｜anouncements",
+      "type": 0,
+      "position": 4,
+      "parentIndex": 3
+    },
+    {
+      "name": "👁️｜spam-link",
+      "type": 0,
+      "position": 5,
+      "parentIndex": 9
+    },
+    {
+      "name": "😎｜survivors",
+      "type": 5,
+      "position": 5,
+      "parentIndex": 4
+    },
+    {
+      "name": "🤠｜staff-post",
+      "type": 0,
+      "position": 5,
+      "parentIndex": 3
+    },
+    {
+      "name": "❓｜curiosities",
+      "type": 0,
+      "position": 5,
+      "parentIndex": 5,
+      "topic": "Curiosidades de personajes"
+    },
+    {
+      "name": "💭｜forum",
+      "type": 15,
+      "position": 6,
+      "parentIndex": 9
+    },
+    {
+      "name": "🏷️｜auto-role",
+      "type": 0,
+      "position": 6,
+      "parentIndex": 3
+    },
+    {
+      "name": "🎶｜soundtrack",
+      "type": 5,
+      "position": 6,
+      "parentIndex": 4
+    },
+    {
+      "name": "😈｜lore",
+      "type": 0,
+      "position": 6,
+      "parentIndex": 5,
+      "topic": "Lore de monstruos"
+    },
+    {
+      "name": "💡｜movesets",
+      "type": 15,
+      "position": 7,
+      "parentIndex": 4,
+      "topic": "SOLO LOS ADMINS PUEDEN ESCRIBIR"
+    },
+    {
+      "name": "🦋｜role-info",
+      "type": 0,
+      "position": 7,
+      "parentIndex": 3
+    },
+    {
+      "name": "👻｜reglas-super-reales-no-fakes",
+      "type": 0,
+      "position": 7,
+      "parentIndex": 9,
+      "rateLimitPerUser": 10
+    },
+    {
+      "name": "😭｜scrapped",
+      "type": 5,
+      "position": 7,
+      "parentIndex": 5,
+      "topic": "Contenido descartado del juego"
+    },
+    {
+      "name": "🎃｜templates",
+      "type": 0,
+      "position": 8,
+      "parentIndex": 3
+    },
+    {
+      "name": "👻｜reglas-super-reales-no-fakes",
+      "type": 0,
+      "position": 8,
+      "parentIndex": 9
+    }
+  ],
+  "capturedAt": "2026-07-30T23:02:46.177Z"
+}
