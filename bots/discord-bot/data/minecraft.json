@@ -1,0 +1,146 @@
+{
+  "name": "Manteca Gang",
+  "description": "🧈El server donde la manteca domina🧈",
+  "iconURL": "https://cdn.discordapp.com/icons/1508186233749115100/00f86b6ca23e6bfe116f95d3177278cb.webp?size=256",
+  "roles": [
+    {
+      "name": "🧈Mantecaland Certificado",
+      "color": 16639106,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 2
+    },
+    {
+      "name": "🧈ManteAmigo",
+      "color": 15844367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 3
+    },
+    {
+      "name": "🧈Mantequin",
+      "color": 13857310,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 4
+    },
+    {
+      "name": "🧈Manteca",
+      "color": 12745742,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 5
+    },
+    {
+      "name": "🧈Manteca Activa",
+      "color": 10381071,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 6
+    },
+    {
+      "name": "🧈ManteStaff",
+      "color": 9916434,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 7
+    },
+    {
+      "name": "🧈ManteAdmin",
+      "color": 9588501,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 8
+    },
+    {
+      "name": "🧈Dios Manteca",
+      "color": 8272397,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 9
+    }
+  ],
+  "categories": [
+    {
+      "name": "Canales de texto",
+      "type": 4,
+      "position": 0,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "Canales de voz",
+      "type": 4,
+      "position": 1,
+      "permissionOverwrites": []
+    }
+  ],
+  "channels": [
+    {
+      "name": "💬︱general-español",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [],
+      "parentIndex": 0
+    },
+    {
+      "name": "General",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [],
+      "parentIndex": 1,
+      "bitrate": 64000
+    },
+    {
+      "name": "🧈• MANTECA",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "39582421746176"
+        }
+      ],
+      "bitrate": 64000
+    },
+    {
+      "name": "💬︱general-english",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [],
+      "parentIndex": 0
+    },
+    {
+      "name": "🎈︱memes",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [],
+      "parentIndex": 0
+    },
+    {
+      "name": "🎨︱arte",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [],
+      "parentIndex": 0
+    },
+    {
+      "name": "💭︱foro",
+      "type": 15,
+      "position": 4,
+      "permissionOverwrites": [],
+      "parentIndex": 0,
+      "topic": "||__~~***NO SEAS CULIAO🧿***~~__||"
+    }
+  ],
+  "capturedAt": "2026-07-31T00:20:02.669Z"
+}

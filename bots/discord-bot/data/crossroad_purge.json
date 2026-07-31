@@ -1,0 +1,569 @@
+{
+  "name": "The CrossRoad Purge [INDEV]",
+  "description": "[INDEV]Un juego asimetrico en donde te pones la piel de tu personaje favorito de tus animes, caricaturas, comics, mangas, videojuegos y cosas por fans estando en un reino de ciclo de vida y muerte, podras ser un nexuder, o un damnater, a tu gusto y criterio",
+  "iconURL": "https://cdn.discordapp.com/icons/1525617832241402087/f3e2ef1ffc49c617af9ea43271ff802f.webp?size=256",
+  "roles": [
+    {
+      "name": "😎Miembro",
+      "color": 15844367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 8
+    },
+    {
+      "name": "🤖Bots",
+      "color": 6323595,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 9
+    },
+    {
+      "name": "🟣 Staff - Dev Team",
+      "color": 10181046,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 10
+    },
+    {
+      "name": "🎶Compositor",
+      "color": 10038562,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 11
+    },
+    {
+      "name": "🔑Builders",
+      "color": 15158332,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "274945018880",
+      "position": 12
+    },
+    {
+      "name": "🎨Artista",
+      "color": 1752220,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 13
+    },
+    {
+      "name": "🎮Tester",
+      "color": 3447003,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 14
+    },
+    {
+      "name": "🌹Contribuidores",
+      "color": 10181046,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 15
+    },
+    {
+      "name": "🔨Developers",
+      "color": 15844367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 16
+    },
+    {
+      "name": "🟣Staff",
+      "color": 7419530,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 17
+    },
+    {
+      "name": "🔵Sr Staff",
+      "color": 3447003,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 18
+    },
+    {
+      "name": "🎭Admin",
+      "color": 3066993,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 19
+    },
+    {
+      "name": "admins server",
+      "color": 3066993,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "8859860401127423",
+      "position": 20
+    },
+    {
+      "name": "owner",
+      "color": 5922075,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 21
+    }
+  ],
+  "categories": [
+    {
+      "name": "📌 Inicio",
+      "type": 4,
+      "position": 0,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "📌 Important",
+      "type": 4,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "🟣 Staff - Dev Team",
+          "allow": "2048",
+          "deny": "0"
+        }
+      ]
+    },
+    {
+      "name": "🌌General",
+      "type": 4,
+      "position": 2,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "🕌Comunidad",
+      "type": 4,
+      "position": 3,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "🟪 Admin Only",
+      "type": 4,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "🟣 Staff - Dev Team",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ]
+    }
+  ],
+  "channels": [
+    {
+      "name": "🌐┋general-español",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [],
+      "parentIndex": 2
+    },
+    {
+      "name": "👋┋bienvenida",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "Koya",
+          "allow": "3072",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "🎨┋fanarts",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [],
+      "parentIndex": 3
+    },
+    {
+      "name": "📜┋reglas",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "🎮Tester",
+          "allow": "1024",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "owner",
+          "allow": "8515703330569297",
+          "deny": "0"
+        },
+        {
+          "type": "member",
+          "name": "1525613438905356299",
+          "allow": "8515703330569297",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "admins server",
+          "allow": "8515703330569297",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "🔨Developers",
+          "allow": "7389800470934592",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "🌹Contribuidores",
+          "allow": "0",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "😎┋admin-only",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "🟣 Staff - Dev Team",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "🤖Bots",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 4
+    },
+    {
+      "name": "🚨┋announcements",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "🎮Tester",
+          "allow": "1024",
+          "deny": "2048"
+        },
+        {
+          "type": "member",
+          "name": "1525613438905356299",
+          "allow": "8515703330569297",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "owner",
+          "allow": "8515703330569297",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "🔨Developers",
+          "allow": "7389800470934592",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "admins server",
+          "allow": "8515703330569297",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "🌹Contribuidores",
+          "allow": "0",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "😞┋despedida",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "🤣┋memes",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [],
+      "parentIndex": 2
+    },
+    {
+      "name": "🎮┋juegos",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [],
+      "parentIndex": 3
+    },
+    {
+      "name": "🔨┋desarrollo-chat",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "🟣 Staff - Dev Team",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 4
+    },
+    {
+      "name": "🤝┋alianzas",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Koya",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "🎮Tester",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "🤖Bots",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "🎶Compositor",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "owner",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "🔑Builders",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "🔨Developers",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "🎨Artista",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "🌹Contribuidores",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "admins server",
+          "allow": "0",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "📺┋multimedia",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [],
+      "parentIndex": 2
+    },
+    {
+      "name": "🔐┋comandos",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [],
+      "parentIndex": 3
+    },
+    {
+      "name": "📁┋portafolio",
+      "type": 15,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "2048",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 3,
+      "topic": "Aqui es donde Personas de este server puedan presentarse como tambien su nivel en cada area de trabajo"
+    },
+    {
+      "name": "👀┋leaks",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "🟣 Staff - Dev Team",
+          "allow": "2048",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "🎨┋dibujos",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [],
+      "parentIndex": 2
+    },
+    {
+      "name": "👻┋lore",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "🎮Tester",
+          "allow": "1024",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "owner",
+          "allow": "8515703330569297",
+          "deny": "0"
+        },
+        {
+          "type": "member",
+          "name": "1525613438905356299",
+          "allow": "8515703330569297",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "admins server",
+          "allow": "8515703330569297",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "🔨Developers",
+          "allow": "7389800470934592",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "🌹Contribuidores",
+          "allow": "0",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "🎭┋creaciones",
+      "type": 15,
+      "position": 4,
+      "permissionOverwrites": [],
+      "parentIndex": 2
+    }
+  ],
+  "capturedAt": "2026-07-31T01:52:29.859Z"
+}

@@ -1,0 +1,3288 @@
+{
+  "name": "Robloxia's Unknown Creations|Roblox production.",
+  "description": "Robloxia's Unknown Creations is the development team behind Failures, an asymmetrical horror game inspired by Die of Death and Grace. ¡More games coming in the future! ¡Enjoy the server and the developments!. Dev team specialized in Roblox Studio and ᴇs/ᴇɴ",
+  "iconURL": "https://cdn.discordapp.com/icons/1469021291779719335/27e565af7af547f3d6b9d92b87b86883.webp?size=256",
+  "roles": [
+    {
+      "name": "TDS BOOOOY🗣🔥🔥",
+      "color": 15277667,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 4
+    },
+    {
+      "name": "Unverified",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 5
+    },
+    {
+      "name": "Verified",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "352399986334721",
+      "position": 6
+    },
+    {
+      "name": "· Colaborations Ping",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 7
+    },
+    {
+      "name": "· Game nights ping💀💀",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 8
+    },
+    {
+      "name": "· Aliances Ping",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 9
+    },
+    {
+      "name": "· Polls Ping",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 10
+    },
+    {
+      "name": "· Leaks Ping",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 11
+    },
+    {
+      "name": "· Revive Chat",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 12
+    },
+    {
+      "name": "· Sub-Announcements Ping",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 13
+    },
+    {
+      "name": "· Game Announcements Ping",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 14
+    },
+    {
+      "name": "· Announcements Ping",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 15
+    },
+    {
+      "name": "Level-1",
+      "color": 5533306,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "49152",
+      "position": 16
+    },
+    {
+      "name": "Level-5",
+      "color": 5533306,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "49152",
+      "position": 17
+    },
+    {
+      "name": "Level-10",
+      "color": 5533306,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "49152",
+      "position": 18
+    },
+    {
+      "name": "Level-20",
+      "color": 5533306,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "49216",
+      "position": 19
+    },
+    {
+      "name": "Level-50",
+      "color": 5533306,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "49216",
+      "position": 20
+    },
+    {
+      "name": "Level-100",
+      "color": 0,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "49216",
+      "position": 21
+    },
+    {
+      "name": "With experience in Roblox Studio",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "49216",
+      "position": 22
+    },
+    {
+      "name": "Just normal people. (Tremendously successful)",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "49216",
+      "position": 23
+    },
+    {
+      "name": "|---|MEMBER|---|",
+      "color": 0,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "4362076160",
+      "position": 24
+    },
+    {
+      "name": "Bots 🤖",
+      "color": 6323595,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 25
+    },
+    {
+      "name": "🌎Another country",
+      "color": 3223857,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 26
+    },
+    {
+      "name": "MX🟩⬜🟥",
+      "color": 3066993,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 27
+    },
+    {
+      "name": "ESP 🟥🟨🟥",
+      "color": 16772096,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 28
+    },
+    {
+      "name": "PE 🟥⬜🟥",
+      "color": 16711680,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 29
+    },
+    {
+      "name": "BRA 🟩🟨🟦",
+      "color": 1274380,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 30
+    },
+    {
+      "name": "VZLA 🟨✨🟦🟥",
+      "color": 16775680,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 31
+    },
+    {
+      "name": "ECU 🟨🟨🟦🟥",
+      "color": 16775680,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 32
+    },
+    {
+      "name": "BOL 🟥🟨🟩",
+      "color": 11018272,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 33
+    },
+    {
+      "name": "ARG🟦⬜🟦",
+      "color": 3447003,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 34
+    },
+    {
+      "name": "PRY 🟥⬜🟦",
+      "color": 16711680,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 35
+    },
+    {
+      "name": "URY ⬜🟦",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 36
+    },
+    {
+      "name": "CHL 🟦⬜🟥",
+      "color": 24736,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 37
+    },
+    {
+      "name": "COL 🟨🟦🟥",
+      "color": 15844367,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 38
+    },
+    {
+      "name": "They/them",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 39
+    },
+    {
+      "name": "He/Him",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 40
+    },
+    {
+      "name": "She/Her",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 41
+    },
+    {
+      "name": "Female ♀️",
+      "color": 16711765,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 42
+    },
+    {
+      "name": "Male♂️",
+      "color": 3447003,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 43
+    },
+    {
+      "name": "13 >>> 16",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 44
+    },
+    {
+      "name": "16 >>> 18",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 45
+    },
+    {
+      "name": "18 >>> 21",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 46
+    },
+    {
+      "name": "21 >>> etc",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 47
+    },
+    {
+      "name": "Animator",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 48
+    },
+    {
+      "name": "Compositor",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 49
+    },
+    {
+      "name": "Artist",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 50
+    },
+    {
+      "name": "Vfx",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 51
+    },
+    {
+      "name": "Modelating",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 52
+    },
+    {
+      "name": "Building",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 53
+    },
+    {
+      "name": "Renders",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 54
+    },
+    {
+      "name": "Code",
+      "color": 16777215,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 55
+    },
+    {
+      "name": "|----)DATA(---|",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "67108864",
+      "position": 56
+    },
+    {
+      "name": "Leyenda del server",
+      "color": 1507459,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "49216",
+      "position": 58
+    },
+    {
+      "name": "Pings permited",
+      "color": 327680,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "281481419341888",
+      "position": 59
+    },
+    {
+      "name": "· Contributor",
+      "color": 2123412,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 60
+    },
+    {
+      "name": "· allied 💪",
+      "color": 15158332,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "281618858426432",
+      "position": 61
+    },
+    {
+      "name": "· Colaborator 🤝",
+      "color": 16777215,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "281616710942784",
+      "position": 62
+    },
+    {
+      "name": "· Content creator",
+      "color": 2067276,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "49216",
+      "position": 63
+    },
+    {
+      "name": "· Tester/ F's",
+      "color": 16758016,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "49216",
+      "position": 64
+    },
+    {
+      "name": "· Homies",
+      "color": 16761600,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "49216",
+      "position": 65
+    },
+    {
+      "name": "· (--[STAFF]--)",
+      "color": 16754176,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "3167287233732161",
+      "position": 70
+    },
+    {
+      "name": "· Server Support",
+      "color": 7471359,
+      "hoist": true,
+      "mentionable": true,
+      "permissions": "4856686816648897",
+      "position": 71
+    },
+    {
+      "name": "· Trial Mod",
+      "color": 11010065,
+      "hoist": true,
+      "mentionable": true,
+      "permissions": "5419636765875905",
+      "position": 72
+    },
+    {
+      "name": "· Special member",
+      "color": 15837455,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 74
+    },
+    {
+      "name": "· Balancer",
+      "color": 16758016,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "562949953421312",
+      "position": 75
+    },
+    {
+      "name": "· Profesional renderist",
+      "color": 16772096,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 76
+    },
+    {
+      "name": "· Profesional Ui creator",
+      "color": 16772096,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 77
+    },
+    {
+      "name": "· Profesional animator",
+      "color": 16772096,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 78
+    },
+    {
+      "name": "· Profesional builder",
+      "color": 16772096,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 79
+    },
+    {
+      "name": "· Profesional effects creator",
+      "color": 16772096,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 80
+    },
+    {
+      "name": "· Profesional artist",
+      "color": 16772096,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 81
+    },
+    {
+      "name": "· Profesional Programator",
+      "color": 16772096,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 82
+    },
+    {
+      "name": "· Helper",
+      "color": 16711684,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 83
+    },
+    {
+      "name": "· Mod",
+      "color": 3447003,
+      "hoist": true,
+      "mentionable": true,
+      "permissions": "7689578701782723",
+      "position": 84
+    },
+    {
+      "name": "· Senior Moderator",
+      "color": 19199,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "7671995650932423",
+      "position": 85
+    },
+    {
+      "name": "· VFX Creator/ F's",
+      "color": 65484,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "67108864",
+      "position": 86
+    },
+    {
+      "name": "· Renderist/ F's",
+      "color": 10038562,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "67108864",
+      "position": 87
+    },
+    {
+      "name": "· Ui creators/ F's",
+      "color": 39423,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "67108864",
+      "position": 88
+    },
+    {
+      "name": "· Artist/ F's",
+      "color": 15105570,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "67108864",
+      "position": 89
+    },
+    {
+      "name": "· 3D Modelators /F's",
+      "color": 65433,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "67108864",
+      "position": 90
+    },
+    {
+      "name": "· Builders/ F's",
+      "color": 15844367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "67108864",
+      "position": 91
+    },
+    {
+      "name": "· Compositor/ F's",
+      "color": 15844367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "67108864",
+      "position": 92
+    },
+    {
+      "name": "· Animator/F's",
+      "color": 3447003,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "67108864",
+      "position": 93
+    },
+    {
+      "name": "· Programator/ F's",
+      "color": 6323595,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "67108864",
+      "position": 94
+    },
+    {
+      "name": "· |)----[Dev ✞ Team]---(|",
+      "color": 16491,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "844568878956608",
+      "position": 95
+    },
+    {
+      "name": "· Admin",
+      "color": 58367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "143948775488",
+      "position": 96
+    },
+    {
+      "name": "· Server Representative",
+      "color": 393400,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "7698701220707015",
+      "position": 97
+    },
+    {
+      "name": "· Server Manager",
+      "color": 1001927,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "7672013636108023",
+      "position": 98
+    },
+    {
+      "name": "· Game Manager",
+      "color": 13823,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "845530951499778",
+      "position": 99
+    },
+    {
+      "name": "· Game Representative",
+      "color": 9983,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "845531086241931",
+      "position": 100
+    },
+    {
+      "name": "· Boss of the server",
+      "color": 1982719,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "7698658547859199",
+      "position": 101
+    },
+    {
+      "name": "· Social links manager",
+      "color": 12028,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "844431439872000",
+      "position": 102
+    },
+    {
+      "name": "· Owner Representative",
+      "color": 11141120,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "3193565202699953",
+      "position": 103
+    },
+    {
+      "name": "· Co-owner",
+      "color": 3474436,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "7698779478163447",
+      "position": 104
+    },
+    {
+      "name": "· Owner",
+      "color": 8589085,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "7698780417163263",
+      "position": 105
+    }
+  ],
+  "categories": [
+    {
+      "name": "•◂¦🌐¦ Inicio",
+      "type": 4,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        }
+      ]
+    },
+    {
+      "name": "Devs",
+      "type": 4,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Game Representative",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Game Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· |)----[Dev ✞ Team]---(|",
+          "allow": "33555456",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "· Balancer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "3073",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Tester/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Social links manager",
+          "allow": "274877907968",
+          "deny": "0"
+        }
+      ]
+    },
+    {
+      "name": "Mods",
+      "type": 4,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Server Representative",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "· Server Support",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Trial Mod",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Admin",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Senior Moderator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Server Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Mod",
+          "allow": "1049600",
+          "deny": "0"
+        }
+      ]
+    },
+    {
+      "name": "sᴇʀᴠᴇʀ sᴛᴀᴛs",
+      "type": 4,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "458276816071950337",
+          "allow": "1068048",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "7688883537443665"
+        }
+      ]
+    },
+    {
+      "name": "Homies zone",
+      "type": 4,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "· Homies",
+          "allow": "1049600",
+          "deny": "0"
+        }
+      ]
+    },
+    {
+      "name": "[———)|𝑰𝒏𝒇𝒐𝒓𝒎𝒂𝒕𝒊𝒐𝒏|(———]",
+      "type": 4,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "33554432",
+          "deny": "7336898045552912"
+        }
+      ]
+    },
+    {
+      "name": "[———)|𝐄𝐱𝐭𝐫𝐚𝐬...|(———]",
+      "type": 4,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "275683213328"
+        }
+      ]
+    },
+    {
+      "name": "Content Creators",
+      "type": 4,
+      "position": 7,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "[———)|𝑮𝒆𝒏𝒆𝒓𝒂𝒍 [✞] 𝑮𝒂𝒎𝒆|(———]",
+      "type": 4,
+      "position": 8,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "33554432",
+          "deny": "7336346142302544"
+        }
+      ]
+    },
+    {
+      "name": "[———)|𝐆𝐞𝐧𝐞𝐫𝐚𝐥 [⨯] 𝐒𝐞𝐫𝐯𝐞𝐫|(———]",
+      "type": 4,
+      "position": 9,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "915485482278481",
+          "deny": "7938880380608768"
+        },
+        {
+          "type": "role",
+          "name": "Level-5",
+          "allow": "70643625251328",
+          "deny": "551903297536"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "33554432",
+          "deny": "7406714889630544"
+        },
+        {
+          "type": "role",
+          "name": "Level-10",
+          "allow": "70368747377216",
+          "deny": "2147483648"
+        }
+      ]
+    },
+    {
+      "name": "•◂¦🎮¦𝙶𝚊𝚖𝚎  𝚗𝚒𝚐𝚑𝚝𝚜/events",
+      "type": 4,
+      "position": 10,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4707317710848",
+          "deny": "7336043347058960"
+        }
+      ]
+    }
+  ],
+  "channels": [
+    {
+      "name": "🫂•◂¦general-homies",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Homies",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 4
+    },
+    {
+      "name": "All Members: 87",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "458276816071950337",
+          "allow": "1068048",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "281475848129360"
+        }
+      ],
+      "parentIndex": 3,
+      "bitrate": 64000
+    },
+    {
+      "name": "raidprotect-logs",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "17179878400"
+        }
+      ]
+    },
+    {
+      "name": "•◂¦🐒¦general-devs",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Artist/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Game Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· |)----[Dev ✞ Team]---(|",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Builders/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· VFX Creator/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Ui creators/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Animator/F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "551903298560"
+        },
+        {
+          "type": "role",
+          "name": "· Renderist/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Tester/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "member",
+          "name": "1046201893128515776",
+          "allow": "131072",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Helper",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Compositor/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Game Representative",
+          "allow": "1051649",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Balancer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Programator/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· 3D Modelators /F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Social links manager",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "•◂¦📜¦𝙶𝚊𝚖𝚎-𝚛𝚞𝚕𝚎𝚜",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "7688883537378129"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "•◂¦📃¦𝚂𝚎𝚛𝚟𝚎𝚛-𝚍𝚎-𝚊𝚙𝚎𝚕𝚊𝚌𝚒𝚘𝚗𝚎𝚜",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "915485482278481",
+          "deny": "7938880380608768"
+        },
+        {
+          "type": "role",
+          "name": "Level-5",
+          "allow": "70643625253376",
+          "deny": "551903297536"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "33554432",
+          "deny": "7406714889632592"
+        },
+        {
+          "type": "role",
+          "name": "Level-10",
+          "allow": "70368747379264",
+          "deny": "2147483648"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "•◂¦🗺️¦𝙼𝚒𝚗𝚎𝚌𝚛𝚊𝚏𝚝",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4707317710848",
+          "deny": "7336043347058960"
+        }
+      ],
+      "parentIndex": 10
+    },
+    {
+      "name": "🔊¦Chill out",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4707317710848",
+          "deny": "7336043347058960"
+        }
+      ],
+      "parentIndex": 10,
+      "bitrate": 64000
+    },
+    {
+      "name": "📚¦general-logs",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "· |)----[Dev ✞ Team]---(|",
+          "allow": "1024",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Trial Mod",
+          "allow": "1049600",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "1049600",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Admin",
+          "allow": "1024",
+          "deny": "51264"
+        },
+        {
+          "type": "role",
+          "name": "· Mod",
+          "allow": "1049600",
+          "deny": "6826457527547904"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "•◂¦♻️¦verification",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "𝚂𝚘𝚌𝚒𝚊𝚕-𝚕𝚒𝚗𝚔𝚜",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4398080065536",
+          "deny": "7688746061412624"
+        },
+        {
+          "type": "role",
+          "name": "· Social links manager",
+          "allow": "2322168557869056",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 6
+    },
+    {
+      "name": "channels",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 7,
+      "rateLimitPerUser": 5
+    },
+    {
+      "name": "•◂¦📁¦𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗-𝚏𝚘𝚕𝚍𝚎𝚛𝚜",
+      "type": 15,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "2048",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "275683395601"
+        },
+        {
+          "type": "role",
+          "name": "· Owner",
+          "allow": "2048",
+          "deny": "0"
+        },
+        {
+          "type": "member",
+          "name": "1387975054649724928",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 5,
+      "topic": "Lore and info of purgatory"
+    },
+    {
+      "name": "📚¦security-logs",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Server Representative",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· |)----[Dev ✞ Team]---(|",
+          "allow": "1024",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "· Server Support",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Trial Mod",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Admin",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Senior Moderator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Mod",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Server Manager",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "•◂¦📢¦𝙶𝚊𝚖𝚎-𝙰𝚗𝚗𝚘𝚞𝚗𝚌𝚎𝚖𝚎𝚗𝚝𝚜",
+      "type": 5,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Game Representative",
+          "allow": "2322305997331521",
+          "deny": "6193328613761040"
+        },
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "2048",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Game Manager",
+          "allow": "2251799813687296",
+          "deny": "563501856718848"
+        },
+        {
+          "type": "role",
+          "name": "Pings permited",
+          "allow": "2251799813687296",
+          "deny": "551903297536"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Owner Representative",
+          "allow": "133120",
+          "deny": "563519305023505"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "🫂•◂¦among-us",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "· Homies",
+          "allow": "1049600",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 4
+    },
+    {
+      "name": "•◂¦💥¦𝚃𝚘𝚠𝚎𝚛-𝚍𝚎𝚏𝚎𝚗𝚜𝚎-𝚜𝚒𝚖𝚞𝚕𝚊𝚝𝚘𝚛",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4707317710848",
+          "deny": "7336043347058960"
+        }
+      ],
+      "parentIndex": 10
+    },
+    {
+      "name": "content-creator-rules",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "268436480",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "· Owner",
+          "allow": "268438544",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Owner Representative",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Content creator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "268438544",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 7
+    },
+    {
+      "name": "•◂¦🐒¦6777777777777777-aaaaaaaaaaaaaaaaaaaa67676767677767676677676676767676776767676",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Artist/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Animator/F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Game Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· VFX Creator/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Builders/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Ui creators/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "551903298560"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Tester/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Renderist/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Compositor/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Balancer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Game Representative",
+          "allow": "1051649",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Programator/ F's",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Admin",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· 3D Modelators /F's",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "🔊¦VC-#[1]",
+      "type": 2,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4707317710848",
+          "deny": "7336043347058960"
+        }
+      ],
+      "parentIndex": 10,
+      "bitrate": 64000
+    },
+    {
+      "name": "Members: 74",
+      "type": 2,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "458276816071950337",
+          "allow": "1068048",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "5436684291799888"
+        }
+      ],
+      "parentIndex": 3,
+      "bitrate": 64000
+    },
+    {
+      "name": "•◂¦📜¦𝑹𝒖𝒍𝒆𝒔",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "35184372088832",
+          "deny": "7688746098113360"
+        }
+      ],
+      "parentIndex": 9,
+      "topic": "a simple rules"
+    },
+    {
+      "name": "•◂¦🏗️¦𝙼𝚊𝚙𝚜-𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗𝚜",
+      "type": 15,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "33554432",
+          "deny": "7336898045552912"
+        },
+        {
+          "type": "role",
+          "name": "· Builders/ F's",
+          "allow": "2048",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· |)----[Dev ✞ Team]---(|",
+          "allow": "563774587142144",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 5
+    },
+    {
+      "name": "•◂¦🎟️¦𝙿𝚘𝚜𝚝𝚞𝚕𝚊𝚝𝚒𝚘𝚗-𝚝𝚒𝚌𝚔𝚎𝚝𝚜",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "35184372088832",
+          "deny": "7688746098146128"
+        }
+      ],
+      "parentIndex": 6
+    },
+    {
+      "name": "•◂¦🎉¦𝑺𝒑𝒂𝒘𝒏𝒔",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "7389803423610960"
+        }
+      ],
+      "parentIndex": 6
+    },
+    {
+      "name": "🔊¦VC-#[2]",
+      "type": 2,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4707317710848",
+          "deny": "7336043347058960"
+        }
+      ],
+      "parentIndex": 10,
+      "bitrate": 64000
+    },
+    {
+      "name": "•◂¦😱¦𝚄𝚙𝚍𝚊𝚝𝚎𝚜",
+      "type": 5,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "📚¦user-logs",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· |)----[Dev ✞ Team]---(|",
+          "allow": "1024",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "· Trial Mod",
+          "allow": "1049600",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "1049600",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Admin",
+          "allow": "1024",
+          "deny": "51264"
+        },
+        {
+          "type": "role",
+          "name": "· Mod",
+          "allow": "1049600",
+          "deny": "6826457527547904"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "•◂¦🌌¦𝙲𝚑𝚊𝚛𝚊𝚌𝚝𝚎𝚛𝚜-𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗",
+      "type": 15,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "33554432",
+          "deny": "7336898045552912"
+        }
+      ],
+      "parentIndex": 5
+    },
+    {
+      "name": "•◂¦📢¦𝑨𝒏𝒏𝒐𝒖𝒏𝒄𝒆𝒎𝒆𝒏𝒕𝒔",
+      "type": 5,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Game Representative",
+          "allow": "2251937253084225",
+          "deny": "4503926850199568"
+        },
+        {
+          "type": "role",
+          "name": "· Server Representative",
+          "allow": "133120",
+          "deny": "5067427901612032"
+        },
+        {
+          "type": "role",
+          "name": "· Game Manager",
+          "allow": "2251799813687296",
+          "deny": "563501856718848"
+        },
+        {
+          "type": "role",
+          "name": "Pings permited",
+          "allow": "2251799813687296",
+          "deny": "551903297536"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "2048",
+          "deny": "5067427901612048"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "2322305997331521",
+          "deny": "6193328613761040"
+        },
+        {
+          "type": "role",
+          "name": "· Server Manager",
+          "allow": "133120",
+          "deny": "5067118932402192"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "Bots: 13",
+      "type": 2,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "458276816071950337",
+          "allow": "1068048",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "806357008"
+        }
+      ],
+      "parentIndex": 3,
+      "bitrate": 64000
+    },
+    {
+      "name": "𝙰𝚖𝚘𝚗𝚐-𝚞𝚜-💎",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4707317710848",
+          "deny": "7336043347058960"
+        }
+      ],
+      "parentIndex": 10
+    },
+    {
+      "name": "🫂•◂¦temas-polemicos",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "· Homies",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 4
+    },
+    {
+      "name": "requirements",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "268437520",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378225575952"
+        },
+        {
+          "type": "role",
+          "name": "· Owner",
+          "allow": "268438544",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Owner Representative",
+          "allow": "268437520",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "3088",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Verified",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 7
+    },
+    {
+      "name": "𝙲𝚘𝚗𝚝𝚊𝚍𝚘𝚛-𝚌𝚘𝚞𝚗𝚝",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4707317710848",
+          "deny": "7336043347058960"
+        }
+      ],
+      "parentIndex": 10
+    },
+    {
+      "name": "•◂¦🗿¦𝑩𝒐𝒐𝒔𝒕𝒔",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "7389803423348752"
+        }
+      ],
+      "parentIndex": 6
+    },
+    {
+      "name": "🫂•◂¦tower-defense-simulator",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "· Homies",
+          "allow": "1049600",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 4
+    },
+    {
+      "name": "📚¦moderation-logs",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Server Representative",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· |)----[Dev ✞ Team]---(|",
+          "allow": "1024",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "· Server Support",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Trial Mod",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Admin",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Senior Moderator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Server Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Mod",
+          "allow": "1049600",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "🔊¦VC-#[3]",
+      "type": 2,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4707317710848",
+          "deny": "7336043347058960"
+        }
+      ],
+      "parentIndex": 10,
+      "bitrate": 64000
+    },
+    {
+      "name": "videos",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "268437520",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "268437520"
+        },
+        {
+          "type": "role",
+          "name": "· Owner",
+          "allow": "268438544",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Owner Representative",
+          "allow": "268437520",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "268438544",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Verified",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "· Content creator",
+          "allow": "2048",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 7
+    },
+    {
+      "name": "•◂¦📊¦𝙶𝚊𝚖𝚎-𝙿𝚘𝚕𝚕𝚜",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4398080065536",
+          "deny": "7688883500677456"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "Boosts: 0",
+      "type": 2,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "458276816071950337",
+          "allow": "1068048",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "5436684291799888"
+        }
+      ],
+      "parentIndex": 3,
+      "bitrate": 64000
+    },
+    {
+      "name": "•◂¦🥀¦𝑺𝒖𝒃-𝑨𝒏𝒏𝒐𝒖𝒏𝒄𝒆𝒎𝒆𝒏𝒕𝒔",
+      "type": 5,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Game Representative",
+          "allow": "2322305997331521",
+          "deny": "6193328613761040"
+        },
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "2048",
+          "deny": "5067427901677584"
+        },
+        {
+          "type": "role",
+          "name": "· Game Manager",
+          "allow": "2251799813687296",
+          "deny": "563501856718848"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Server Representative",
+          "allow": "133120",
+          "deny": "5067427901612032"
+        },
+        {
+          "type": "role",
+          "name": "· Owner Representative",
+          "allow": "133120",
+          "deny": "563519305023504"
+        },
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "2322305997331521",
+          "deny": "6193328613761040"
+        },
+        {
+          "type": "role",
+          "name": "· Server Manager",
+          "allow": "133120",
+          "deny": "5067118932402192"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "•◂¦👀¦𝑪𝒐𝒍𝒂𝒃𝒐𝒓𝒂𝒕𝒊𝒐𝒏𝒔",
+      "type": 5,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "¦general-mods",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Server Representative",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "· Trial Mod",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Senior Moderator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Server Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Mod",
+          "allow": "1049600",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "•◂¦📊¦𝑳𝒆𝒗𝒆𝒍𝒔",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "7389665984444497"
+        },
+        {
+          "type": "role",
+          "name": "Bots 🤖",
+          "allow": "0",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 6
+    },
+    {
+      "name": "🫂•◂¦minecraft",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Homies",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ],
+      "parentIndex": 4
+    },
+    {
+      "name": "🔊¦EVENTS-#[1]",
+      "type": 13,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "16777232",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Owner Representative",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Mod",
+          "allow": "16777232",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Trial Mod",
+          "allow": "20971536",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 10,
+      "bitrate": 64000,
+      "userLimit": 10000
+    },
+    {
+      "name": "•◂¦💪¦𝑨𝒍𝒊𝒂𝒏𝒄𝒆𝒔",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· allied 💪",
+          "allow": "70368744314880",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "35184372088832",
+          "deny": "7688746098113296"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "🔊¦EVENTS-#[2]",
+      "type": 13,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "16777232",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Owner Representative",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Mod",
+          "allow": "16777232",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Trial Mod",
+          "allow": "20971536",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 10,
+      "bitrate": 64000,
+      "userLimit": 10000
+    },
+    {
+      "name": "•◂¦📊¦𝙿𝚘𝚕𝚕𝚜",
+      "type": 0,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "633318697769024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Server Representative",
+          "allow": "633318697769024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "35184372088832",
+          "deny": "7688746098146128"
+        },
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "633318697769024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "633456137067585",
+          "deny": "7882247193501712"
+        },
+        {
+          "type": "role",
+          "name": "· Server Manager",
+          "allow": "633318697769024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "¦comands-zone",
+      "type": 0,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Server Representative",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "· Server Support",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Trial Mod",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "· Admin",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Senior Moderator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Mod",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Server Manager",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "•◂¦⚠️¦𝙻𝚎𝚊𝚔𝚜",
+      "type": 5,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "51200",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Game Manager",
+          "allow": "51200",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "309237696512"
+        },
+        {
+          "type": "role",
+          "name": "· |)----[Dev ✞ Team]---(|",
+          "allow": "51200",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Owner Representative",
+          "allow": "51200",
+          "deny": "268435472"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "[💤|AFK ZONE|💤]",
+      "type": 2,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4707317710848",
+          "deny": "7336043347058960"
+        }
+      ],
+      "parentIndex": 10,
+      "bitrate": 64000
+    },
+    {
+      "name": "•◂¦💡¦𝙲𝚘𝚗𝚌𝚎𝚙𝚝𝚜",
+      "type": 15,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "33554432",
+          "deny": "7336346142253328"
+        }
+      ],
+      "parentIndex": 8,
+      "topic": "Ideas E Conceptos para el juego🔦🚨"
+    },
+    {
+      "name": "•◂¦ᴇsᴘ¦𝙶𝚎𝚗𝚎𝚛𝚊𝚕",
+      "type": 0,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "6755401588711504",
+          "deny": "549755813888"
+        },
+        {
+          "type": "role",
+          "name": "Pings permited",
+          "allow": "131072",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· |)----[Dev ✞ Team]---(|",
+          "allow": "2147516480",
+          "deny": "549755813888"
+        },
+        {
+          "type": "role",
+          "name": "· Owner Representative",
+          "allow": "2147516480",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "49216",
+          "deny": "7318747484397584"
+        },
+        {
+          "type": "role",
+          "name": "· (--[STAFF]--)",
+          "allow": "2147516480",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "3072"
+        },
+        {
+          "type": "member",
+          "name": "1417997392200077495",
+          "allow": "32768",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Verified",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Bots 🤖",
+          "allow": "0",
+          "deny": "3072"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "2147535953",
+          "deny": "378762428416"
+        },
+        {
+          "type": "role",
+          "name": "· Server Manager",
+          "allow": "6755418768449616",
+          "deny": "549755813888"
+        },
+        {
+          "type": "role",
+          "name": "· Social links manager",
+          "allow": "2147516480",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "•◂¦📞¦𝚁𝚎𝚙𝚘𝚛𝚝𝚜",
+      "type": 15,
+      "position": 7,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "7688883537378129"
+        }
+      ],
+      "parentIndex": 8,
+      "topic": "exploiters and bugs reports pls thanks"
+    },
+    {
+      "name": "•◂¦ᴇɴɢ¦𝙶𝚎𝚗𝚎𝚛𝚊𝚕",
+      "type": 0,
+      "position": 7,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "3072"
+        },
+        {
+          "type": "role",
+          "name": "Pings permited",
+          "allow": "131072",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "49216",
+          "deny": "7319297240211472"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "•◂¦🗃️¦𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚍-𝙲𝚘𝚗𝚝𝚎𝚗𝚝",
+      "type": 0,
+      "position": 8,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "· Co-owner",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "· |)----[Dev ✞ Team]---(|",
+          "allow": "633318697736192",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Owner",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4398080065536",
+          "deny": "7688746061412624"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "•◂¦🎥¦𝑴𝒖𝒍𝒕𝒊𝒎𝒆𝒅𝒊𝒂",
+      "type": 0,
+      "position": 8,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "3072"
+        },
+        {
+          "type": "role",
+          "name": "Pings permited",
+          "allow": "131072",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "35184372088832",
+          "deny": "7688746098111312"
+        },
+        {
+          "type": "role",
+          "name": "· Server Manager",
+          "allow": "6826060511457360",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "•◂¦✍¦𝒂𝒓𝒕𝒔-𝒛𝒐𝒏𝒆",
+      "type": 0,
+      "position": 9,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "3072"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4398080065536",
+          "deny": "7336352584704272"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "•◂¦✍¦𝑭𝒂𝒏-𝒂𝒓𝒕𝒔-𝒛𝒐𝒏𝒆",
+      "type": 0,
+      "position": 9,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "3072"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "4707317710848",
+          "deny": "7618068079583504"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "•◂¦🤖¦𝙱𝚘𝚝𝚜-𝚣𝚘𝚗𝚎",
+      "type": 0,
+      "position": 10,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "3072"
+        },
+        {
+          "type": "role",
+          "name": "Level-5",
+          "allow": "70643625251328",
+          "deny": "551903297536"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "33554432",
+          "deny": "7406714889630544"
+        },
+        {
+          "type": "role",
+          "name": "Level-10",
+          "allow": "70368747377216",
+          "deny": "2147483648"
+        },
+        {
+          "type": "role",
+          "name": "Pings permited",
+          "allow": "131072",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "· Boss of the server",
+          "allow": "915485482278481",
+          "deny": "7938880380608768"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "•◂¦🤝¦𝙿𝚛𝚘𝚖𝚘𝚝𝚒𝚘𝚗-𝙰𝚗𝚍-𝚂𝚑𝚘𝚠𝚌𝚊𝚜𝚎",
+      "type": 0,
+      "position": 11,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Unverified",
+          "allow": "0",
+          "deny": "3072"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "35184372088832",
+          "deny": "7618377353929488"
+        }
+      ],
+      "parentIndex": 9,
+      "rateLimitPerUser": 21600
+    }
+  ],
+  "capturedAt": "2026-07-31T01:51:12.594Z"
+}
