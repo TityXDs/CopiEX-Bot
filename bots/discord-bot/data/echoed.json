@@ -1,0 +1,2130 @@
+{
+  "name": "Echoed Nightmare",
+  "iconURL": "https://cdn.discordapp.com/icons/1408940743065604149/7655926eb7d66a1a548ebe33a9c83697.webp?size=256",
+  "roles": [
+    {
+      "name": "Scripter / Coder",
+      "color": 11027200,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "1720707884371521",
+      "position": 2
+    },
+    {
+      "name": "Imágen perm",
+      "color": 3066993,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "1720707884371521",
+      "position": 3
+    },
+    {
+      "name": "Announcements Ping",
+      "color": 3066993,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 4
+    },
+    {
+      "name": "Allys Ping",
+      "color": 15844367,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 5
+    },
+    {
+      "name": "Game nights",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 6
+    },
+    {
+      "name": "Voice actor",
+      "color": 6323595,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "1720604767406017",
+      "position": 7
+    },
+    {
+      "name": "nuevo rol",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 9
+    },
+    {
+      "name": "Invitador!!",
+      "color": 15158332,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "1720707884371521",
+      "position": 11
+    },
+    {
+      "name": "concept creator",
+      "color": 15844367,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "1720707884371521",
+      "position": 13
+    },
+    {
+      "name": "OST PING",
+      "color": 3447003,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 14
+    },
+    {
+      "name": "POLLS PING",
+      "color": 3447003,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 15
+    },
+    {
+      "name": "TEASERS PING",
+      "color": 3447003,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 16
+    },
+    {
+      "name": "Users",
+      "color": 3066993,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "66561",
+      "position": 17
+    },
+    {
+      "name": "English Chat",
+      "color": 15844367,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 18
+    },
+    {
+      "name": "Chat español",
+      "color": 3066993,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 19
+    },
+    {
+      "name": "Miembro especial",
+      "color": 3447003,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 20
+    },
+    {
+      "name": "Content-Creator",
+      "color": 16711684,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 21
+    },
+    {
+      "name": "EX-WORKER",
+      "color": 15105570,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 22
+    },
+    {
+      "name": "!Colaborador!",
+      "color": 12745742,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "1721807559716807",
+      "position": 23
+    },
+    {
+      "name": "Ayudante!",
+      "color": 11342935,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 24
+    },
+    {
+      "name": "Testers",
+      "color": 15844367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 28
+    },
+    {
+      "name": "Artist 2026",
+      "color": 15277667,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 29
+    },
+    {
+      "name": "Beta Tester",
+      "color": 15844367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 30
+    },
+    {
+      "name": "Renderers!",
+      "color": 3669862,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 31
+    },
+    {
+      "name": "Composer",
+      "color": 10748159,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 32
+    },
+    {
+      "name": "Modeler",
+      "color": 2123412,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 33
+    },
+    {
+      "name": "Concept Artists",
+      "color": 38399,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 34
+    },
+    {
+      "name": "Trial Developer",
+      "color": 11342935,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "274877910016",
+      "position": 35
+    },
+    {
+      "name": "Moderator",
+      "color": 10038562,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 36
+    },
+    {
+      "name": "Marketer",
+      "color": 11027200,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 38
+    },
+    {
+      "name": "Developers",
+      "color": 7419530,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "4504115023957056",
+      "position": 39
+    },
+    {
+      "name": "Comunity Manager",
+      "color": 2067276,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "1721826619162623",
+      "position": 40
+    },
+    {
+      "name": "Project Manager",
+      "color": 11342935,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 41
+    },
+    {
+      "name": "Admin",
+      "color": 15844367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 42
+    },
+    {
+      "name": "Lead Developer",
+      "color": 2329600,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 43
+    },
+    {
+      "name": "Co-Owner",
+      "color": 1752220,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "1721826619162623",
+      "position": 44
+    },
+    {
+      "name": "CREATOR / Owner",
+      "color": 16711680,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "1099511627790",
+      "position": 45
+    }
+  ],
+  "categories": [
+    {
+      "name": "Starting!",
+      "type": 4,
+      "position": 0,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "Important",
+      "type": 4,
+      "position": 1,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "Development",
+      "type": 4,
+      "position": 2,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "Dev categoría",
+      "type": 4,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "Composer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Voice actor",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Concept Artists",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "275147394064",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Modeler",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Renderers!",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Beta Tester",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Testers",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Marketer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Content-Creator",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Artist 2026",
+          "allow": "1049600",
+          "deny": "0"
+        }
+      ]
+    },
+    {
+      "name": "Global",
+      "type": 4,
+      "position": 4,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "Chats",
+      "type": 4,
+      "position": 5,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "Us",
+      "type": 4,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "1024",
+          "deny": "4503909670324240"
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "type": 4,
+      "position": 7,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "Development forum",
+      "type": 4,
+      "position": 8,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "Support!",
+      "type": 4,
+      "position": 9,
+      "permissionOverwrites": []
+    }
+  ],
+  "channels": [
+    {
+      "name": "moderator-only",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Moderator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "member",
+          "name": "1012491408617259038",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ]
+    },
+    {
+      "name": "📦┇socials",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "1024",
+          "deny": "4503909670324240"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 6
+    },
+    {
+      "name": "Chat",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [],
+      "parentIndex": 5,
+      "bitrate": 64000
+    },
+    {
+      "name": "┇tickets",
+      "type": 5,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "66560",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "📖┇history-english",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 7
+    },
+    {
+      "name": "📗┇reglas-español",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "1024",
+          "deny": "4503978389817360"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "Dev-Voice-Chat",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "Composer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Voice actor",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Concept Artists",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "275147394064",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Modeler",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Renderers!",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Beta Tester",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Testers",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Marketer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Content-Creator",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Artist 2026",
+          "allow": "1049600",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 3,
+      "bitrate": 64000
+    },
+    {
+      "name": "┇dev-reglas",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "922284899061342259",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "66560",
+          "deny": "274877908992"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "┇killers-info",
+      "type": 15,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "66560",
+          "deny": "275146352656"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "📢┇announcements",
+      "type": 5,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "Dev Stream",
+      "type": 13,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "20972560",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "1196408238890065",
+          "deny": "5084150646317568"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1196408238890049",
+          "deny": "5084150646317584"
+        }
+      ],
+      "parentIndex": 2,
+      "bitrate": 64000,
+      "userLimit": 10000
+    },
+    {
+      "name": "💻┇sneaks",
+      "type": 5,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "👥┇general-español",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "English Chat",
+          "allow": "0",
+          "deny": "35840"
+        },
+        {
+          "type": "role",
+          "name": "CREATOR / Owner",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Chat español",
+          "allow": "3072",
+          "deny": "32768"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "0",
+          "deny": "32768"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "0",
+          "deny": "32768"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "3072",
+          "deny": "32768"
+        }
+      ],
+      "parentIndex": 4
+    },
+    {
+      "name": "Gaming",
+      "type": 2,
+      "position": 1,
+      "permissionOverwrites": [],
+      "parentIndex": 5,
+      "bitrate": 64000
+    },
+    {
+      "name": "🎶┇ost",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "👤┇general-english",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "English Chat",
+          "allow": "3072",
+          "deny": "4503599627411456"
+        },
+        {
+          "type": "role",
+          "name": "Chat español",
+          "allow": "0",
+          "deny": "35840"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "32768"
+        }
+      ],
+      "parentIndex": 4
+    },
+    {
+      "name": "autorol",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "235148962103951360",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ]
+    },
+    {
+      "name": "📖┇history-spanish",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 7
+    },
+    {
+      "name": "📹┇general-videos",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "1024",
+          "deny": "4503909670324240"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 6
+    },
+    {
+      "name": "┇dev-rules",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "922284899061342259",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "1024",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "66560",
+          "deny": "274877908992"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "📙┇rules-english",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "1024",
+          "deny": "4503600432678929"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "📢┇-job-application-rules",
+      "type": 5,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 9
+    },
+    {
+      "name": "┇class-info",
+      "type": 15,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "66560",
+          "deny": "275146344464"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "👋┇welcome",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "English Chat",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "CREATOR / Owner",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Chat español",
+          "allow": "1024",
+          "deny": "4503978389800976"
+        },
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "1024",
+          "deny": "4504115023898704"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "377957124096"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "┇mechanics",
+      "type": 15,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "66560",
+          "deny": "275146352656"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "👋┇goodbye",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "English Chat",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Chat español",
+          "allow": "1024",
+          "deny": "4503978389800976"
+        },
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "1024",
+          "deny": "4504115023898704"
+        },
+        {
+          "type": "role",
+          "name": "CREATOR / Owner",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "377957124096"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "🤝┇partnerships",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Lead Developer",
+          "allow": "2885651087752257",
+          "deny": "5630052242817040"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1025",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "🎨┇arts",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [],
+      "parentIndex": 4
+    },
+    {
+      "name": "┇dev-anuncios",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Content-Creator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "66560",
+          "deny": "274877908992"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "raidprotect-logs",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "466578580449525760",
+          "allow": "3072",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ]
+    },
+    {
+      "name": "┇suggestions",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [],
+      "parentIndex": 9,
+      "topic": "****"
+    },
+    {
+      "name": "⌨️┇3d-progress",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "horarios",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "Composer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Voice actor",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Concept Artists",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "275147394064",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Modeler",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Renderers!",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Beta Tester",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Testers",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Marketer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Content-Creator",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Artist 2026",
+          "allow": "1049600",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "🤝┇partnerships-rules",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Lead Developer",
+          "allow": "2885651087752257",
+          "deny": "5630052242817040"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1025",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "🗳️┇polls",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "┇npc-info",
+      "type": 15,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "66560",
+          "deny": "275146352656"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "📕┇game-information",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "English Chat",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "1024",
+          "deny": "4504115023898704"
+        },
+        {
+          "type": "role",
+          "name": "CREATOR / Owner",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Chat español",
+          "allow": "1024",
+          "deny": "4503978389800976"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "377957124096"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "┇concepts",
+      "type": 15,
+      "position": 3,
+      "permissionOverwrites": [],
+      "parentIndex": 9
+    },
+    {
+      "name": "😂┇memes",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [],
+      "parentIndex": 4
+    },
+    {
+      "name": "📷┇multimedia",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [],
+      "parentIndex": 4
+    },
+    {
+      "name": "🎵┇sound-effects",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "┇opinions",
+      "type": 15,
+      "position": 4,
+      "permissionOverwrites": [],
+      "parentIndex": 9
+    },
+    {
+      "name": "❓┇faq",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Lead Developer",
+          "allow": "2322701134322753",
+          "deny": "6193002196246544"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "328769",
+          "deny": "6755932822497296"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "┇characters-descriptions",
+      "type": 15,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "66624",
+          "deny": "275683403792"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "┇usuarios",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "68608",
+          "deny": "274877906944"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "member",
+          "name": "922284899061342259",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Testers",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "🎮┇devs-introduction",
+      "type": 15,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "66624",
+          "deny": "413122619393"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "274877906944"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "💬┇voice-lines",
+      "type": 0,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "1024",
+          "deny": "4503909670324240"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "┇dev-channel",
+      "type": 0,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "1485097516990070845",
+          "allow": "309237697600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Beta Tester",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "68608",
+          "deny": "274877906944"
+        },
+        {
+          "type": "member",
+          "name": "1187893875419910205",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "member",
+          "name": "922284899061342259",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Marketer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Testers",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Content-Creator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Moderator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "📕┇game-style",
+      "type": 0,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "English Chat",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "1024",
+          "deny": "4504115023898704"
+        },
+        {
+          "type": "role",
+          "name": "Chat español",
+          "allow": "1024",
+          "deny": "4503978389800976"
+        },
+        {
+          "type": "role",
+          "name": "CREATOR / Owner",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "377957124096"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "┇maps",
+      "type": 15,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "66560",
+          "deny": "292326221824"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "❗┇promo-spam",
+      "type": 0,
+      "position": 5,
+      "permissionOverwrites": [],
+      "parentIndex": 4
+    },
+    {
+      "name": "🗣️┇ecn-curious-facts",
+      "type": 5,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "1024",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "🌑┇game-nights",
+      "type": 0,
+      "position": 6,
+      "permissionOverwrites": [],
+      "parentIndex": 4
+    },
+    {
+      "name": "┇dev-channel-english",
+      "type": 0,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "1485097516990070845",
+          "allow": "309237697600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Beta Tester",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "68608",
+          "deny": "274877906944"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "member",
+          "name": "922284899061342259",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Marketer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Testers",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Content-Creator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "member",
+          "name": "1187893875419910205",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "┇other",
+      "type": 15,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "1025",
+          "deny": "274877908992"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "66560",
+          "deny": "292326221840"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "┇dev-memes",
+      "type": 0,
+      "position": 7,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Beta Tester",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "68608",
+          "deny": "274877906944"
+        },
+        {
+          "type": "member",
+          "name": "1187893875419910205",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "member",
+          "name": "922284899061342259",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Testers",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Marketer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Content-Creator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "┇tareas-de-devs",
+      "type": 15,
+      "position": 8,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "274878088256",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "412317369408",
+          "deny": "805316625"
+        },
+        {
+          "type": "role",
+          "name": "Testers",
+          "allow": "274877973504",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "┇kits-concepts",
+      "type": 15,
+      "position": 9,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "3072"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "3072",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "412317371456",
+          "deny": "805314577"
+        },
+        {
+          "type": "role",
+          "name": "Testers",
+          "allow": "274877975552",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "┇road-map",
+      "type": 15,
+      "position": 10,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Composer",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Testers",
+          "allow": "274877973504",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "0",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "412317369408",
+          "deny": "805316625"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "alianzas-devs",
+      "type": 0,
+      "position": 11,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "922284899061342259",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "66560",
+          "deny": "274877908992"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "┇dev-personajes",
+      "type": 0,
+      "position": 12,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "Composer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Voice actor",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Concept Artists",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "275147394064",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Modeler",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Renderers!",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Beta Tester",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Testers",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Marketer",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Content-Creator",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Artist 2026",
+          "allow": "1049600",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "┇prueba-hola-si",
+      "type": 0,
+      "position": 13,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Trial Developer",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Comunity Manager",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Content-Creator",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "66560",
+          "deny": "274877908992"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 3
+    }
+  ],
+  "capturedAt": "2026-07-31T04:37:37.727Z"
+}
