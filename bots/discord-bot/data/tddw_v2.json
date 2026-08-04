@@ -1,0 +1,1517 @@
+{
+  "name": "Tower Defense: DifferentsWorlds",
+  "description": "TD:DW is a tower defense game inspired by TDS, RTD, and TDX. It will merge several aspects of each of the aforementioned tower defense games / TD:DW es un tower defense inspirado en TDS , RTD y TDX  este fusionara varios aspectos de cada tower defense mencionados",
+  "iconURL": "https://cdn.discordapp.com/icons/1533229799894548580/412020dc01408d768c2e84b0941e412b.webp?size=256",
+  "roles": [
+    {
+      "name": "Composer tdd",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 2
+    },
+    {
+      "name": "Artist tdd",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 3
+    },
+    {
+      "name": "Renderer tdd",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 4
+    },
+    {
+      "name": "Balancer tdd",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 5
+    },
+    {
+      "name": "Modelator tdd",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 6
+    },
+    {
+      "name": "builder tdd",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 7
+    },
+    {
+      "name": "Animator tdd",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 8
+    },
+    {
+      "name": "Scripter tdd",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 9
+    },
+    {
+      "name": "Allys",
+      "color": 1146986,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 10
+    },
+    {
+      "name": "Announcements Pings",
+      "color": 1146986,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 11
+    },
+    {
+      "name": "Teasers Ping",
+      "color": 1146986,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 12
+    },
+    {
+      "name": "Polls ping",
+      "color": 1146986,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 13
+    },
+    {
+      "name": "Game nights",
+      "color": 5533306,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 14
+    },
+    {
+      "name": "Users",
+      "color": 3066993,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "3215360",
+      "position": 15
+    },
+    {
+      "name": "Homies",
+      "color": 15126910,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 16
+    },
+    {
+      "name": "Alied",
+      "color": 2922142,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 17
+    },
+    {
+      "name": "Tester",
+      "color": 12745742,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 18
+    },
+    {
+      "name": "Staff",
+      "color": 15277667,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 19
+    },
+    {
+      "name": "Helper",
+      "color": 11342935,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 20
+    },
+    {
+      "name": "Mod",
+      "color": 2123412,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8824675992337623",
+      "position": 21
+    },
+    {
+      "name": "Bots",
+      "color": 5533306,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 22
+    },
+    {
+      "name": "Developers",
+      "color": 10181046,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "2895548773825783",
+      "position": 23
+    },
+    {
+      "name": "Senior mod",
+      "color": 3447003,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "6840459062148855",
+      "position": 24
+    },
+    {
+      "name": "Admin",
+      "color": 15844367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8824675992337623",
+      "position": 25
+    },
+    {
+      "name": "Comunity manager",
+      "color": 1752220,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 26
+    },
+    {
+      "name": "Project manager",
+      "color": 15158332,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 27
+    },
+    {
+      "name": "owner represesntative",
+      "color": 14490395,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 28
+    },
+    {
+      "name": "Co-Owner",
+      "color": 3447003,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 29
+    },
+    {
+      "name": "When te dan poderes por tiempo limitado",
+      "color": 15277667,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 30
+    },
+    {
+      "name": "Owner",
+      "color": 16515072,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 31
+    }
+  ],
+  "categories": [
+    {
+      "name": "「🥶」𝚂𝚝𝚊𝚏𝚏 𝚣𝚘𝚗𝚎",
+      "type": 4,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "274877910016",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "274877910016",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ]
+    },
+    {
+      "name": "「❕」𝙸𝚖𝚙𝚘𝚛𝚝𝚊𝚗𝚝",
+      "type": 4,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378762446864"
+        }
+      ]
+    },
+    {
+      "name": "「👀」𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚖𝚎𝚗𝚝",
+      "type": 4,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "805308432",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378225559568"
+        }
+      ]
+    },
+    {
+      "name": "「👷」𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜 𝚣𝚘𝚗𝚎",
+      "type": 4,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Tester",
+          "allow": "377957125120",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "309238696960",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ]
+    },
+    {
+      "name": "Homies zone",
+      "type": 4,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Homies",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ]
+    },
+    {
+      "name": "「🌐」Global",
+      "type": 4,
+      "position": 5,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "「📖」𝙻𝚘𝚛𝚎",
+      "type": 4,
+      "position": 6,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "Canales de voz",
+      "type": 4,
+      "position": 7,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "「🖥️」𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚖𝚎𝚗𝚝 𝚏𝚘𝚛𝚞𝚖",
+      "type": 4,
+      "position": 8,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "275683215376"
+        }
+      ]
+    }
+  ],
+  "channels": [
+    {
+      "name": "「👋」𝚆𝚎𝚕𝚌𝚘𝚖𝚎",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "429457053791158281",
+          "allow": "2048",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "member",
+          "name": "276060004262477825",
+          "allow": "8515703330569297",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378762446864"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "homies-general",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Homies",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ],
+      "parentIndex": 4
+    },
+    {
+      "name": "「💻」𝚂𝚗𝚎𝚊𝚔𝚜",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "805308432",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378225559568"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "dev-anuncios",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "1049600",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "staff vc",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "274877910016",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "274877910016",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 0,
+      "bitrate": 64000
+    },
+    {
+      "name": "「📓」𝙻𝚘𝚛𝚎-𝚎𝚜𝚙𝚊𝚗̃𝚘𝚕",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [],
+      "parentIndex": 6
+    },
+    {
+      "name": "𝙼𝚘𝚍𝚎𝚜",
+      "type": 15,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "275683215376"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "「𝙴𝚂𝙿」𝙶𝚎𝚗𝚎𝚛𝚊𝚕",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "3072",
+          "deny": "1125902054359040"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "3072",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 5
+    },
+    {
+      "name": "dev voice chat",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Tester",
+          "allow": "377957125120",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "309238696960",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ],
+      "parentIndex": 3,
+      "bitrate": 64000
+    },
+    {
+      "name": "𝙶𝚊𝚖𝚒𝚗𝚐",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [],
+      "parentIndex": 7,
+      "bitrate": 64000
+    },
+    {
+      "name": "raidprotect-logs",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "274877910016",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "274877910016",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "𝙶𝚑𝚊𝚝",
+      "type": 2,
+      "position": 1,
+      "permissionOverwrites": [],
+      "parentIndex": 7,
+      "bitrate": 64000
+    },
+    {
+      "name": "dev-chat",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Tester",
+          "allow": "377957125120",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "309238696960",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "「🎶」𝙾𝚜𝚝",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "805308432",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378225559568"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "「𝙴𝙽𝙶」𝙶𝚎𝚗𝚎𝚛𝚊𝚕",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "3072",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "3072",
+          "deny": "1125902859673616"
+        }
+      ],
+      "parentIndex": 5
+    },
+    {
+      "name": "staff-chat",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "274877910016",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "274877910016",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "「📓」𝙻𝚘𝚛𝚎-𝙴𝚗𝚐𝚕𝚒𝚜𝚑",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [],
+      "parentIndex": 6
+    },
+    {
+      "name": "𝚜𝚔𝚒𝚕𝚕𝚜",
+      "type": 15,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "275683215376"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "play-zone-homies",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Homies",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ],
+      "parentIndex": 4
+    },
+    {
+      "name": "「😭」𝙶𝚘𝚘𝚍𝚋𝚢𝚎",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "member",
+          "name": "276060004262477825",
+          "allow": "8515703330569297",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378762446864"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "「📟」𝟹𝙳-𝚖𝚘𝚍𝚎𝚕𝚜",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "805308432",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378225559568"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "dev-rules",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "1049600",
+          "deny": "2048"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "1049600",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "「🎨」𝙰𝚛𝚝𝚜",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [],
+      "parentIndex": 5
+    },
+    {
+      "name": "𝙶𝚊𝚖𝚎 𝙽𝚒𝚐𝚑𝚝𝚜",
+      "type": 2,
+      "position": 2,
+      "permissionOverwrites": [],
+      "parentIndex": 7,
+      "bitrate": 64000
+    },
+    {
+      "name": "「📘」𝚁𝚞𝚕𝚎𝚜",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378762446864"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "𝙼𝚊𝚙𝚜",
+      "type": 15,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "275683215376"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "𝚃𝚛𝚘𝚙𝚜",
+      "type": 15,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "275683215376"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "users",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Tester",
+          "allow": "377957125120",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "309238696960",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "「🤣」𝙼𝚎𝚖𝚎𝚜",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [],
+      "parentIndex": 5
+    },
+    {
+      "name": "「🎵」𝚂𝙵𝚇",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "805308432",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378225559568"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "「📈」𝙿𝚘𝚕𝚕𝚜",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378762446864"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "dev-memes",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Tester",
+          "allow": "377957125120",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "309238696960",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "「📷」𝙼𝚞𝚕𝚝𝚒𝚖𝚎𝚍𝚒𝚊",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "49152",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Users",
+          "allow": "51200",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 5
+    },
+    {
+      "name": "「🤝」𝙰𝚕𝚕𝚢𝚜",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378762446864"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "𝙴𝚗𝚎𝚖𝚒𝚎𝚜",
+      "type": 15,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "275683215376"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "「🗣️」𝚅𝚘𝚒𝚌𝚎-𝚕𝚒𝚗𝚎𝚜𝚜",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "805308432",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378225559568"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "𝙱𝚘𝚜𝚜𝚎𝚜",
+      "type": 15,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "275683215376"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "「🤝」𝙰𝚕𝚕𝚢𝚜-𝚁𝚞𝚕𝚎𝚜",
+      "type": 0,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378762446864"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "devs-job",
+      "type": 15,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Tester",
+          "allow": "377957125120",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "309238696960",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "「🤖」𝙲𝚘𝚖𝚊𝚗𝚍𝚜",
+      "type": 0,
+      "position": 5,
+      "permissionOverwrites": [],
+      "parentIndex": 5
+    },
+    {
+      "name": "「📢」𝙰𝚗𝚗𝚘𝚞𝚗𝚌𝚎𝚖𝚎𝚗𝚝𝚜",
+      "type": 0,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378762446864"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "「🌑」𝙶𝚊𝚖𝚎-𝚗𝚒𝚐𝚑𝚝𝚜",
+      "type": 0,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "377957173312",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 5
+    },
+    {
+      "name": "finished-jobs",
+      "type": 15,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Tester",
+          "allow": "377957125120",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Developers",
+          "allow": "377958173696",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "309238696960",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        }
+      ],
+      "parentIndex": 3
+    },
+    {
+      "name": "𝚛𝚊𝚛𝚒𝚝𝚒𝚎𝚜",
+      "type": 15,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "275683215376"
+        }
+      ],
+      "parentIndex": 8
+    },
+    {
+      "name": "「❓」𝙵𝙰𝚀",
+      "type": 0,
+      "position": 7,
+      "permissionOverwrites": [],
+      "parentIndex": 5
+    },
+    {
+      "name": "「📢」𝚂𝚞𝚋-𝙰𝚗𝚗𝚘𝚞𝚗𝚌𝚎𝚖𝚎𝚗𝚝𝚜",
+      "type": 0,
+      "position": 7,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378762446864"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "「🎟️」𝚃𝚒𝚌𝚔𝚎𝚝𝚜",
+      "type": 0,
+      "position": 8,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "710034409214181396",
+          "allow": "274877908992",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "275683215376",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "378762446864"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "「👾」𝙿𝚛𝚘𝚖𝚘-𝚜𝚙𝚊𝚖",
+      "type": 0,
+      "position": 8,
+      "permissionOverwrites": [],
+      "parentIndex": 5
+    },
+    {
+      "name": "ticket-4",
+      "type": 0,
+      "position": 9,
+      "permissionOverwrites": [
+        {
+          "type": "member",
+          "name": "1499779189560185018",
+          "allow": "68608",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Co-Owner",
+          "allow": "3072",
+          "deny": "0"
+        },
+        {
+          "type": "member",
+          "name": "710034409214181396",
+          "allow": "1024",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Owner",
+          "allow": "3072",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Admin",
+          "allow": "3072",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "Mod",
+          "allow": "3072",
+          "deny": "0"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "277025507328",
+          "deny": "1024"
+        }
+      ],
+      "parentIndex": 1,
+      "topic": "Opened <t:1785633043:f> by <@1499779189560185018>"
+    },
+    {
+      "name": "「💡」𝙲𝚘𝚗𝚌𝚎𝚙𝚝𝚜",
+      "type": 15,
+      "position": 9,
+      "permissionOverwrites": [],
+      "parentIndex": 5
+    }
+  ],
+  "capturedAt": "2026-08-04T20:53:31.038Z"
+}

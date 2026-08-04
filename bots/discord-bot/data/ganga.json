@@ -1,0 +1,422 @@
+{
+  "name": "⬜ TOP Gang",
+  "description": "⬜¡Jueginhos con la Gang!⬜",
+  "iconURL": "https://cdn.discordapp.com/icons/1532519672426270730/a650b09de2a6fa24a08a69a6ba24d4de.webp?size=256",
+  "roles": [
+    {
+      "name": "🦞Gang Miembro",
+      "color": 16711680,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 12
+    },
+    {
+      "name": "🦞Friend Certificado",
+      "color": 16711684,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 13
+    },
+    {
+      "name": "🦞TitiAmigo",
+      "color": 16059665,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 14
+    },
+    {
+      "name": "🦞Gangeano",
+      "color": 15667220,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 15
+    },
+    {
+      "name": "🦞Gangin",
+      "color": 12717328,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 16
+    },
+    {
+      "name": "🦞Gangi Activa",
+      "color": 11210257,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 17
+    },
+    {
+      "name": "🦞Gampi Bot",
+      "color": 9061187,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 18
+    },
+    {
+      "name": "🦞GangeStaff",
+      "color": 10949140,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 19
+    },
+    {
+      "name": "🦞GangeAdmin",
+      "color": 10292752,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 20
+    },
+    {
+      "name": "🦞Dios Gangerisimo",
+      "color": 8260879,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 21
+    }
+  ],
+  "categories": [
+    {
+      "name": "Admin",
+      "type": 4,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1049600"
+        },
+        {
+          "type": "role",
+          "name": "🦞GangeStaff",
+          "allow": "1049600",
+          "deny": "0"
+        }
+      ]
+    },
+    {
+      "name": "Importante",
+      "type": 4,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        }
+      ]
+    },
+    {
+      "name": "Canales de texto",
+      "type": 4,
+      "position": 2,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "Juegos",
+      "type": 4,
+      "position": 3,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "Canales de voz",
+      "type": 4,
+      "position": 4,
+      "permissionOverwrites": []
+    },
+    {
+      "name": "67",
+      "type": 4,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ]
+    }
+  ],
+  "channels": [
+    {
+      "name": "💬︱general",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "33792"
+        }
+      ],
+      "parentIndex": 5
+    },
+    {
+      "name": "🎤︱General 1",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [],
+      "parentIndex": 4,
+      "bitrate": 64000
+    },
+    {
+      "name": "⬜• gangcraft.mcsh.io",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "39582421746176"
+        }
+      ],
+      "bitrate": 64000
+    },
+    {
+      "name": "💬︱general",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "32768"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "🦞︱reglalinhas",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "👻︱gamenight",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [],
+      "parentIndex": 3
+    },
+    {
+      "name": "👻︱Game Night",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [],
+      "parentIndex": 3,
+      "bitrate": 64000
+    },
+    {
+      "name": "🟣only-admin",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "🦞Gangi Activa",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        },
+        {
+          "type": "role",
+          "name": "🦞GangeStaff",
+          "allow": "1024",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "🎭︱bienvenida-y-despedida",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "32768",
+          "deny": "0"
+        }
+      ]
+    },
+    {
+      "name": "🦞︱anuncios",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "⬜• puerto -  19132",
+      "type": 2,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "39582421746176"
+        }
+      ],
+      "bitrate": 64000
+    },
+    {
+      "name": "🎤︱General 2",
+      "type": 2,
+      "position": 1,
+      "permissionOverwrites": [],
+      "parentIndex": 4,
+      "bitrate": 64000
+    },
+    {
+      "name": "👨‍🎨︱arte",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "32768",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "👻︱fotos-67",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [],
+      "parentIndex": 3
+    },
+    {
+      "name": "🔐︱multimedia",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "32768",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "🦞︱staff-post",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "🎤︱General 3",
+      "type": 2,
+      "position": 2,
+      "permissionOverwrites": [],
+      "parentIndex": 4,
+      "bitrate": 64000
+    },
+    {
+      "name": "🎤︱Trio",
+      "type": 2,
+      "position": 3,
+      "permissionOverwrites": [],
+      "parentIndex": 4,
+      "bitrate": 64000,
+      "userLimit": 3
+    },
+    {
+      "name": "🔑︱levelinha",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "32768"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "💭︱foro",
+      "type": 15,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "32768",
+          "deny": "0"
+        }
+      ],
+      "parentIndex": 2,
+      "topic": "||__~~***NO SEAS CULIAO🧿***~~__||"
+    },
+    {
+      "name": "🎤︱Quintuple",
+      "type": 2,
+      "position": 4,
+      "permissionOverwrites": [],
+      "parentIndex": 4,
+      "bitrate": 64000,
+      "userLimit": 5
+    },
+    {
+      "name": "🎤︱Grupo",
+      "type": 2,
+      "position": 5,
+      "permissionOverwrites": [],
+      "parentIndex": 4,
+      "bitrate": 64000,
+      "userLimit": 10
+    }
+  ],
+  "capturedAt": "2026-08-02T20:31:24.866Z"
+}
