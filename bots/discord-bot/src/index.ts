@@ -1,4 +1,11 @@
-import { Client, GatewayIntentBits, Collection, Events, Interaction, AutocompleteInteraction } from 'discord.js';
+import {
+  Client,
+  GatewayIntentBits,
+  Collection,
+  Events,
+  Interaction,
+  AutocompleteInteraction,
+} from 'discord.js';
 import * as copyServer from './commands/copy-server.js';
 import * as importServer from './commands/import-server.js';
 import * as deleteSnapshot from './commands/delete-snapshot.js';
@@ -37,7 +44,7 @@ client.once(Events.ClientReady, c => {
 });
 
 client.on(Events.InteractionCreate, async (interaction: Interaction) => {
-  // Handle autocomplete
+  // ── Autocomplete ──────────────────────────────────────────────────────────
   if (interaction.isAutocomplete()) {
     const command = commands.get(interaction.commandName);
     if (command?.autocomplete) {
@@ -50,6 +57,34 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
     return;
   }
 
+  // ── String select menu (import-server options) ────────────────────────────
+  if (interaction.isStringSelectMenu()) {
+    if (interaction.customId.startsWith('import_select:')) {
+      try {
+        await importServer.handleSelectMenu(interaction);
+      } catch (err) {
+        console.error('[select menu] Error in import_select:', err);
+      }
+    }
+    return;
+  }
+
+  // ── Buttons (import confirm / cancel) ─────────────────────────────────────
+  if (interaction.isButton()) {
+    if (
+      interaction.customId.startsWith('import_confirm:') ||
+      interaction.customId.startsWith('import_cancel:')
+    ) {
+      try {
+        await importServer.handleButton(interaction);
+      } catch (err) {
+        console.error('[button] Error in import button:', err);
+      }
+    }
+    return;
+  }
+
+  // ── Slash commands ────────────────────────────────────────────────────────
   if (!interaction.isChatInputCommand()) return;
 
   const command = commands.get(interaction.commandName);
