@@ -315,19 +315,26 @@ export async function handleButton(interaction: ButtonInteraction) {
         }
       }
 
-      // Reorder all roles by desired position
-      if (createdRoles.length > 0) {
-        try {
-          createdRoles.sort((a, b) => a.desiredPosition - b.desiredPosition);
-          const positionData = createdRoles.map((entry, i) => ({
-            role: entry.role.id,
-            position: i + 1,
-          }));
-          await guild.roles.setPositions(positionData);
-          log('Roles reordered.');
-        } catch (e) {
-          console.error('[import-server] Could not reorder roles (non-fatal):', e);
+      // Reorder roles by their original snapshot position.
+      // We do a fresh fetch so any roles that errored during create/edit are
+      // still included, then look up each role by name to build a clean
+      // position list. Roles are sorted ascending (lowest rank first) and
+      // assigned sequential positions 1..N so Discord places them correctly
+      // (higher sequential number = higher in the role list).
+      try {
+        await guild.roles.fetch();
+        const sortedSnap = [...snapshot.roles].sort((a, b) => a.position - b.position);
+        const positionData: Array<{ role: string; position: number }> = [];
+        for (let i = 0; i < sortedSnap.length; i++) {
+          const guildRole = guild.roles.cache.find(r => r.name === sortedSnap[i].name);
+          if (guildRole) positionData.push({ role: guildRole.id, position: i + 1 });
         }
+        if (positionData.length > 0) {
+          await guild.roles.setPositions(positionData);
+          log(`Roles reordered (${positionData.length} roles).`);
+        }
+      } catch (e) {
+        console.error('[import-server] Could not reorder roles (non-fatal):', e);
       }
     }
 
