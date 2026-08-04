@@ -98,7 +98,8 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     ]);
 
     const channels: ChannelSnapshot[] = fullGuild.channels.cache
-      .filter((c): c is GuildChannel => channelTypes.has(c.type as ChannelType))
+      .filter(c => channelTypes.has(c.type as ChannelType))
+      .map(c => c as unknown as GuildChannel)
       .sort((a, b) => a.position - b.position)
       .map(c => {
         const snap: ChannelSnapshot = {
@@ -110,11 +111,12 @@ export async function execute(interaction: ChatInputCommandInteraction) {
         if (c.parentId && categoryIndexMap.has(c.parentId)) {
           snap.parentIndex = categoryIndexMap.get(c.parentId);
         }
-        if ('topic' in c && c.topic) snap.topic = c.topic;
-        if ('nsfw' in c && c.nsfw) snap.nsfw = c.nsfw;
-        if ('rateLimitPerUser' in c && c.rateLimitPerUser) snap.rateLimitPerUser = c.rateLimitPerUser;
-        if ('bitrate' in c && c.bitrate) snap.bitrate = c.bitrate;
-        if ('userLimit' in c && c.userLimit) snap.userLimit = c.userLimit;
+        const ca = c as unknown as Record<string, unknown>;
+        if (ca['topic']) snap.topic = ca['topic'] as string;
+        if (ca['nsfw']) snap.nsfw = ca['nsfw'] as boolean;
+        if (ca['rateLimitPerUser']) snap.rateLimitPerUser = ca['rateLimitPerUser'] as number;
+        if (ca['bitrate']) snap.bitrate = ca['bitrate'] as number;
+        if (ca['userLimit']) snap.userLimit = ca['userLimit'] as number;
         return snap;
       });
 

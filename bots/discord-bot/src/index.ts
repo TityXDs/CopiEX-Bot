@@ -9,6 +9,7 @@ import {
 import * as copyServer from './commands/copy-server.js';
 import * as importServer from './commands/import-server.js';
 import * as deleteSnapshot from './commands/delete-snapshot.js';
+import * as download from './commands/download.js';
 
 const TOKEN = process.env.DISCORD_TOKEN;
 
@@ -24,15 +25,15 @@ interface Command {
 }
 
 const commands = new Collection<string, Command>();
-commands.set(copyServer.data.name, copyServer as Command);
-commands.set(importServer.data.name, importServer as Command);
+commands.set(copyServer.data.name,     copyServer     as Command);
+commands.set(importServer.data.name,   importServer   as Command);
 commands.set(deleteSnapshot.data.name, deleteSnapshot as Command);
+commands.set(download.data.name,       download       as Command);
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
 
-// Prevent unhandled errors from crashing the process
 client.on(Events.Error, err => {
   console.error('[discord client error]', err.message);
 });
@@ -40,7 +41,7 @@ client.on(Events.Error, err => {
 client.once(Events.ClientReady, c => {
   console.log(`✅ Discord bot ready! Logged in as ${c.user.tag}`);
   console.log(`📡 Serving ${c.guilds.cache.size} guild(s)`);
-  console.log('Commands: /copy-server, /import-server, /delete-snapshot');
+  console.log('Commands: /copy-server, /import-server, /delete-snapshot, /download');
 });
 
 client.on(Events.InteractionCreate, async (interaction: Interaction) => {
@@ -48,11 +49,8 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
   if (interaction.isAutocomplete()) {
     const command = commands.get(interaction.commandName);
     if (command?.autocomplete) {
-      try {
-        await command.autocomplete(interaction);
-      } catch (err) {
-        console.error(`[autocomplete] Error for /${interaction.commandName}:`, err);
-      }
+      try { await command.autocomplete(interaction); }
+      catch (err) { console.error(`[autocomplete] Error for /${interaction.commandName}:`, err); }
     }
     return;
   }
@@ -60,11 +58,8 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
   // ── String select menu (import-server options) ────────────────────────────
   if (interaction.isStringSelectMenu()) {
     if (interaction.customId.startsWith('import_select:')) {
-      try {
-        await importServer.handleSelectMenu(interaction);
-      } catch (err) {
-        console.error('[select menu] Error in import_select:', err);
-      }
+      try { await importServer.handleSelectMenu(interaction); }
+      catch (err) { console.error('[select menu] Error in import_select:', err); }
     }
     return;
   }
@@ -75,11 +70,8 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
       interaction.customId.startsWith('import_confirm:') ||
       interaction.customId.startsWith('import_cancel:')
     ) {
-      try {
-        await importServer.handleButton(interaction);
-      } catch (err) {
-        console.error('[button] Error in import button:', err);
-      }
+      try { await importServer.handleButton(interaction); }
+      catch (err) { console.error('[button] Error in import button:', err); }
     }
     return;
   }
@@ -104,9 +96,7 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
       } else {
         await interaction.reply(msg);
       }
-    } catch {
-      // Interaction may have expired — log and move on
-    }
+    } catch { /* interaction may have expired */ }
   }
 });
 

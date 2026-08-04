@@ -11,6 +11,7 @@ import { REST, Routes } from 'discord.js';
 import * as copyServer from './commands/copy-server.js';
 import * as importServer from './commands/import-server.js';
 import * as deleteSnapshot from './commands/delete-snapshot.js';
+import * as download from './commands/download.js';
 
 const TOKEN = process.env.DISCORD_TOKEN;
 const CLIENT_ID = process.env.DISCORD_CLIENT_ID;
@@ -21,7 +22,12 @@ if (!TOKEN || !CLIENT_ID) {
   process.exit(1);
 }
 
-const commands = [copyServer.data.toJSON(), importServer.data.toJSON(), deleteSnapshot.data.toJSON()];
+const commands = [
+  copyServer.data.toJSON(),
+  importServer.data.toJSON(),
+  deleteSnapshot.data.toJSON(),
+  download.data.toJSON(),
+];
 
 const rest = new REST().setToken(TOKEN);
 
@@ -29,13 +35,11 @@ async function deploy() {
   console.log('🔄 Registering slash commands…');
 
   if (GUILD_ID) {
-    // Guild-specific (instant)
     const data = await rest.put(Routes.applicationGuildCommands(CLIENT_ID!, GUILD_ID), {
       body: commands,
     }) as unknown[];
     console.log(`✅ Registered ${data.length} command(s) to guild ${GUILD_ID} (instant).`);
   } else {
-    // Global (up to 1h propagation)
     const data = await rest.put(Routes.applicationCommands(CLIENT_ID!), {
       body: commands,
     }) as unknown[];

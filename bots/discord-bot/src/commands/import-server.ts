@@ -15,6 +15,9 @@ import {
   ButtonBuilder,
   ButtonStyle,
   EmbedBuilder,
+  TextChannel,
+  VoiceChannel,
+  CategoryChannel,
 } from 'discord.js';
 import { loadSnapshot, listSnapshots } from '../storage.js';
 import type { PermissionOverwriteSnapshot } from '../types.js';
@@ -59,11 +62,11 @@ export const data = new SlashCommandBuilder()
   .addBooleanOption(opt =>
     opt
       .setName('archive')
-      .setDescription('Archivar canales actuales en una carpeta oculta en vez de eliminarlos')
+      .setDescription('Archivar canales no coincidentes en una carpeta oculta en vez de eliminarlos')
       .setRequired(false)
   );
 
-// ── Helpers ───────────────────────────────────────────────────────────────────
+// ── UI helpers ────────────────────────────────────────────────────────────────
 function buildSelectMenu(userId: string, guildId: string, selected: Set<ImportOptionValue>) {
   return new StringSelectMenuBuilder()
     .setCustomId(`import_select:${userId}:${guildId}`)
@@ -134,7 +137,6 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     return;
   }
 
-  // Store pending state — all options selected by default
   const allSelected = new Set(IMPORT_OPTIONS.map(o => o.value));
   pendingImports.set(pendingKey(interaction.user.id, guild.id), {
     snapshotName,
@@ -147,10 +149,11 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     .setTitle(`⚠️ Importar snapshot: \`${snapshotName}\``)
     .setDescription(
       `Vas a aplicar este snapshot al servidor **${guild.name}**.\n\n` +
-      `Usa el menú para elegir qué elementos copiar — todo está seleccionado por defecto.\n\n` +
+      `Usa el menú para elegir qué elementos copiar — todo está seleccionado por defecto.\n` +
+      `Los canales y roles con el mismo nombre **no se borrarán** — solo se actualizarán sus permisos.\n\n` +
       (useArchive
-        ? '📦 Los canales actuales serán **archivados** en una carpeta oculta para admins.'
-        : '🗑️ Los canales y roles actuales serán **eliminados**.')
+        ? '📦 Los canales sin coincidencia serán **archivados** en una carpeta oculta para admins.'
+        : '🗑️ Los canales y roles sin coincidencia serán **eliminados**.')
     )
     .addFields(
       { name: 'Roles',       value: `${snapshot.roles.length}`,      inline: true },
@@ -178,11 +181,7 @@ export async function handleSelectMenu(interaction: StringSelectMenuInteraction)
   const pending = pendingImports.get(key);
 
   if (!pending) {
-    await interaction.update({
-      content: '❌ Esta sesión expiró. Vuelve a usar `/import-server`.',
-      components: [],
-      embeds: [],
-    });
+    await interaction.update({ content: '❌ Esta sesión expiró. Vuelve a usar `/import-server`.', components: [], embeds: [] });
     return;
   }
 
@@ -191,9 +190,7 @@ export async function handleSelectMenu(interaction: StringSelectMenuInteraction)
   const selectRow = new ActionRowBuilder<StringSelectMenuBuilder>()
     .addComponents(buildSelectMenu(userId, guildId, pending.selectedOptions));
 
-  await interaction.update({
-    components: [selectRow, buildButtonRow(userId, guildId)],
-  });
+  await interaction.update({ components: [selectRow, buildButtonRow(userId, guildId)] });
 }
 
 // ── Button interaction ────────────────────────────────────────────────────────
@@ -207,21 +204,12 @@ export async function handleButton(interaction: ButtonInteraction) {
 
   if (action === 'import_cancel') {
     pendingImports.delete(key);
-    await interaction.update({
-      content: '❌ Importación cancelada.',
-      components: [],
-      embeds: [],
-    });
+    await interaction.update({ content: '❌ Importación cancelada.', components: [], embeds: [] });
     return;
   }
 
-  // import_confirm
   if (!pending) {
-    await interaction.update({
-      content: '❌ Esta sesión expiró. Vuelve a usar `/import-server`.',
-      components: [],
-      embeds: [],
-    });
+    await interaction.update({ content: '❌ Esta sesión expiró. Vuelve a usar `/import-server`.', components: [], embeds: [] });
     return;
   }
 
@@ -235,11 +223,7 @@ export async function handleButton(interaction: ButtonInteraction) {
 
   const snapshot = loadSnapshot(pending.snapshotName);
   if (!snapshot) {
-    await interaction.update({
-      content: `❌ El snapshot \`${pending.snapshotName}\` ya no existe.`,
-      components: [],
-      embeds: [],
-    });
+    await interaction.update({ content: `❌ El snapshot \`${pending.snapshotName}\` ya no existe.`, components: [], embeds: [] });
     return;
   }
 
@@ -259,77 +243,79 @@ export async function handleButton(interaction: ButtonInteraction) {
     await guild.roles.fetch();
     await guild.channels.fetch();
 
-    // ── 1. Handle existing channels ──────────────────────────────────────────
-    if (sel.has('channels')) {
-      if (useArchive) {
-        log('Archive mode: creating archive category…');
-        const dateStr = new Date().toLocaleDateString('es-ES', {
-          day: '2-digit', month: '2-digit', year: 'numeric',
-        });
-        const archiveCategory = await guild.channels.create({
-          name: `📦 Archivo ${dateStr}`,
-          type: ChannelType.GuildCategory,
-          permissionOverwrites: [
-            { id: guild.roles.everyone.id, deny: [PermissionFlagsBits.ViewChannel] },
-          ],
-        });
-        const nonCategoryChannels = guild.channels.cache.filter(
-          (c): c is GuildChannel =>
-            c.type !== ChannelType.GuildCategory && c.id !== archiveCategory.id
-        );
-        for (const channel of nonCategoryChannels.values()) {
-          try {
-            await (channel as GuildChannel & { edit(opts: object): Promise<unknown> }).edit({
-              parent: archiveCategory.id,
-              lockPermissions: false,
-            });
-            await sleep(350);
-          } catch (e) {
-            console.error('[import-server] Could not move channel to archive:', channel.name, e);
-          }
-        }
-        const oldCategories = guild.channels.cache.filter(
-          c => c.type === ChannelType.GuildCategory && c.id !== archiveCategory.id
-        );
-        for (const cat of oldCategories.values()) {
-          try { await cat.delete('Server import — archive mode'); await sleep(300); } catch { /* skip */ }
-        }
-      } else {
-        log('Deleting existing channels…');
-        for (const channel of guild.channels.cache.values()) {
-          try { await channel.delete('Server import'); await sleep(350); } catch { /* skip */ }
-        }
-      }
+    // ── Helper: convert stored overwrites to Discord API format ─────────────
+    const roleNameToId = new Map<string, string>();
+
+    function buildOverwrites(overwrites: PermissionOverwriteSnapshot[] | undefined) {
+      if (!sel.has('permissions') || !overwrites?.length) return undefined;
+      return overwrites
+        .filter(o => o.type === 'role' && roleNameToId.has(o.name))
+        .map(o => ({
+          id: roleNameToId.get(o.name)!,
+          allow: BigInt(o.allow),
+          deny: BigInt(o.deny),
+        }));
     }
 
-    // ── 2. Handle roles ───────────────────────────────────────────────────────
+    // ── 1. Roles ─────────────────────────────────────────────────────────────
     if (sel.has('roles')) {
-      log('Deleting existing roles…');
-      const deletableRoles = guild.roles.cache.filter(
-        r => !r.managed && r.name !== '@everyone' && r.editable
-      );
-      for (const role of deletableRoles.values()) {
-        try { await role.delete('Server import'); await sleep(350); } catch { /* skip */ }
-      }
+      // Build snapshot role name set (excluding @everyone)
+      const snapshotRoleNames = new Set(snapshot.roles.map(r => r.name));
 
-      log(`Creating ${snapshot.roles.length} roles…`);
+      // Update existing roles that appear in the snapshot
       const createdRoles: Array<{ role: Role; desiredPosition: number }> = [];
-      for (const r of snapshot.roles) {
-        try {
-          const created = await guild.roles.create({
-            name: r.name,
-            color: r.color,
-            hoist: r.hoist,
-            mentionable: r.mentionable,
-            permissions: BigInt(r.permissions),
-          });
-          createdRoles.push({ role: created, desiredPosition: r.position });
-          await sleep(350);
-        } catch (e) {
-          console.error('[import-server] Failed to create role', r.name, e);
+
+      for (const existingRole of guild.roles.cache.values()) {
+        if (existingRole.managed || existingRole.name === '@everyone') continue;
+
+        if (snapshotRoleNames.has(existingRole.name)) {
+          // Role exists in both — update its properties instead of recreating
+          const snap = snapshot.roles.find(r => r.name === existingRole.name)!;
+          try {
+            const updated = await existingRole.edit({
+              color: snap.color,
+              hoist: snap.hoist,
+              mentionable: snap.mentionable,
+              permissions: BigInt(snap.permissions),
+            });
+            createdRoles.push({ role: updated, desiredPosition: snap.position });
+            log(`Updated existing role: ${existingRole.name}`);
+            await sleep(300);
+          } catch (e) {
+            console.error('[import-server] Failed to update role', existingRole.name, e);
+          }
+        } else {
+          // Role not in snapshot — delete it
+          if (existingRole.editable) {
+            try { await existingRole.delete('Server import'); await sleep(300); } catch { /* skip */ }
+          }
         }
       }
 
+      // Refresh cache after deletions
+      await guild.roles.fetch();
+
+      // Create roles that exist in snapshot but not in guild
+      const existingRoleNames = new Set(guild.roles.cache.map(r => r.name));
+      for (const snap of snapshot.roles) {
+        if (existingRoleNames.has(snap.name)) continue; // already handled above
+        try {
+          const created = await guild.roles.create({
+            name: snap.name,
+            color: snap.color,
+            hoist: snap.hoist,
+            mentionable: snap.mentionable,
+            permissions: BigInt(snap.permissions),
+          });
+          createdRoles.push({ role: created, desiredPosition: snap.position });
+          log(`Created new role: ${snap.name}`);
+          await sleep(350);
+        } catch (e) {
+          console.error('[import-server] Failed to create role', snap.name, e);
+        }
+      }
+
+      // Reorder all roles by desired position
       if (createdRoles.length > 0) {
         try {
           createdRoles.sort((a, b) => a.desiredPosition - b.desiredPosition);
@@ -345,76 +331,188 @@ export async function handleButton(interaction: ButtonInteraction) {
       }
     }
 
-    // ── 3. Build roleNameToId map ────────────────────────────────────────────
+    // ── 2. Build roleNameToId map (after role changes) ────────────────────────
     await guild.roles.fetch();
-    const roleNameToId = new Map<string, string>();
     roleNameToId.set('@everyone', guild.roles.everyone.id);
     for (const r of guild.roles.cache.values()) roleNameToId.set(r.name, r.id);
 
-    function buildOverwrites(overwrites: PermissionOverwriteSnapshot[] | undefined) {
-      if (!sel.has('permissions') || !overwrites?.length) return undefined;
-      return overwrites
-        .filter(o => o.type === 'role' && roleNameToId.has(o.name))
-        .map(o => ({
-          id: roleNameToId.get(o.name)!,
-          allow: BigInt(o.allow),
-          deny: BigInt(o.deny),
-        }));
-    }
-
-    // ── 4. Create categories & channels ─────────────────────────────────────
+    // ── 3. Channels ──────────────────────────────────────────────────────────
     if (sel.has('channels')) {
-      log('Creating categories…');
-      const newCategoryIds: string[] = [];
-      for (const cat of snapshot.categories) {
-        try {
-          const opts: Parameters<typeof guild.channels.create>[0] = {
-            name: cat.name,
-            type: ChannelType.GuildCategory,
-            position: cat.position,
-          };
-          const overwrites = buildOverwrites(cat.permissionOverwrites);
-          if (overwrites?.length) opts.permissionOverwrites = overwrites;
-          const created = await guild.channels.create(opts);
-          newCategoryIds.push(created.id);
-          await sleep(400);
-        } catch (e) {
-          console.error('[import-server] Failed to create category', cat.name, e);
-          newCategoryIds.push('');
+      await guild.channels.fetch();
+
+      // Index existing channels/categories by name (lowercase) for matching
+      const existingCatsByName = new Map<string, CategoryChannel>();
+      const existingChannelsByNameType = new Map<string, GuildChannel>();
+
+      for (const ch of guild.channels.cache.values()) {
+        if (ch.type === ChannelType.GuildCategory) {
+          existingCatsByName.set(ch.name.toLowerCase(), ch as CategoryChannel);
+        } else {
+          const key = `${ch.name.toLowerCase()}|${ch.type}`;
+          existingChannelsByNameType.set(key, ch as GuildChannel);
         }
       }
 
-      log('Creating channels…');
-      for (const ch of snapshot.channels) {
-        try {
-          const opts: Parameters<typeof guild.channels.create>[0] = {
-            name: ch.name,
-            type: ch.type as ChannelType,
-            position: ch.position,
-          };
-          if (ch.parentIndex !== undefined && newCategoryIds[ch.parentIndex]) {
-            opts.parent = newCategoryIds[ch.parentIndex];
+      const snapshotCatNames = new Set(snapshot.categories.map(c => c.name.toLowerCase()));
+      const snapshotChannelKeys = new Set(
+        snapshot.channels.map(c => `${c.name.toLowerCase()}|${c.type}`)
+      );
+
+      // Separate matched vs unmatched existing channels
+      const unmatchedNonCat: GuildChannel[] = [];
+      const unmatchedCats: CategoryChannel[] = [];
+
+      for (const ch of guild.channels.cache.values()) {
+        if (ch.type === ChannelType.GuildCategory) {
+          if (!snapshotCatNames.has(ch.name.toLowerCase())) {
+            unmatchedCats.push(ch as CategoryChannel);
           }
-          if (ch.topic) opts.topic = ch.topic;
-          if (ch.nsfw) opts.nsfw = ch.nsfw;
-          if (ch.rateLimitPerUser) opts.rateLimitPerUser = ch.rateLimitPerUser;
-          if (ch.bitrate) opts.bitrate = ch.bitrate;
-          if (ch.userLimit) opts.userLimit = ch.userLimit;
+        } else {
+          const key = `${ch.name.toLowerCase()}|${ch.type}`;
+          if (!snapshotChannelKeys.has(key)) {
+            unmatchedNonCat.push(ch as GuildChannel);
+          }
+        }
+      }
 
-          const overwrites = buildOverwrites(ch.permissionOverwrites);
-          if (overwrites?.length) opts.permissionOverwrites = overwrites;
+      // Handle unmatched non-category channels (archive or delete)
+      if (unmatchedNonCat.length > 0) {
+        if (useArchive) {
+          log('Archive mode: creating archive category for unmatched channels…');
+          const dateStr = new Date().toLocaleDateString('es-ES', {
+            day: '2-digit', month: '2-digit', year: 'numeric',
+          });
+          const archiveCategory = await guild.channels.create({
+            name: `📦 Archivo ${dateStr}`,
+            type: ChannelType.GuildCategory,
+            permissionOverwrites: [
+              { id: guild.roles.everyone.id, deny: [PermissionFlagsBits.ViewChannel] },
+            ],
+          });
+          for (const ch of unmatchedNonCat) {
+            try {
+              await (ch as GuildChannel & { edit(opts: object): Promise<unknown> }).edit({
+                parent: archiveCategory.id,
+                lockPermissions: false,
+              });
+              await sleep(350);
+            } catch (e) {
+              console.error('[import-server] Could not archive channel:', ch.name, e);
+            }
+          }
+        } else {
+          for (const ch of unmatchedNonCat) {
+            try { await ch.delete('Server import'); await sleep(300); } catch { /* skip */ }
+          }
+        }
+      }
 
-          await guild.channels.create(opts);
-          await sleep(400);
-        } catch (e) {
-          console.error('[import-server] Failed to create channel', ch.name, e);
+      // Delete unmatched categories (after channels are moved out)
+      for (const cat of unmatchedCats) {
+        try { await cat.delete('Server import'); await sleep(300); } catch { /* skip */ }
+      }
+
+      // Process categories: create new ones, update permissions on existing
+      const newCategoryIds: string[] = [];
+      for (const snapCat of snapshot.categories) {
+        const existing = existingCatsByName.get(snapCat.name.toLowerCase());
+        if (existing) {
+          // Already exists — update permissions if selected
+          if (sel.has('permissions')) {
+            const overwrites = buildOverwrites(snapCat.permissionOverwrites);
+            if (overwrites?.length) {
+              try {
+                await existing.permissionOverwrites.set(overwrites);
+                await sleep(300);
+              } catch (e) {
+                console.error('[import-server] Failed to update category permissions:', snapCat.name, e);
+              }
+            }
+          }
+          newCategoryIds.push(existing.id);
+          log(`Kept existing category: ${snapCat.name}`);
+        } else {
+          // Create new category
+          try {
+            const opts: Parameters<typeof guild.channels.create>[0] = {
+              name: snapCat.name,
+              type: ChannelType.GuildCategory,
+              position: snapCat.position,
+            };
+            const overwrites = buildOverwrites(snapCat.permissionOverwrites);
+            if (overwrites?.length) opts.permissionOverwrites = overwrites;
+            const created = await guild.channels.create(opts);
+            newCategoryIds.push(created.id);
+            log(`Created new category: ${snapCat.name}`);
+            await sleep(400);
+          } catch (e) {
+            console.error('[import-server] Failed to create category:', snapCat.name, e);
+            newCategoryIds.push('');
+          }
+        }
+      }
+
+      // Refresh channel cache
+      await guild.channels.fetch();
+
+      // Process channels: update existing, create new
+      for (const snapCh of snapshot.channels) {
+        const matchKey = `${snapCh.name.toLowerCase()}|${snapCh.type}`;
+        const existing = existingChannelsByNameType.get(matchKey);
+        const parentId = snapCh.parentIndex !== undefined
+          ? (newCategoryIds[snapCh.parentIndex] ?? null)
+          : null;
+
+        if (existing) {
+          // Channel exists — update permissions and parent if needed
+          log(`Updating existing channel: ${snapCh.name}`);
+          try {
+            const editOpts: Record<string, unknown> = {};
+            if (parentId) editOpts.parent = parentId;
+
+            if (sel.has('permissions')) {
+              const overwrites = buildOverwrites(snapCh.permissionOverwrites);
+              if (overwrites?.length) editOpts.permissionOverwrites = overwrites;
+            }
+
+            if (Object.keys(editOpts).length > 0) {
+              await (existing as TextChannel | VoiceChannel).edit(editOpts as never);
+              await sleep(300);
+            }
+          } catch (e) {
+            console.error('[import-server] Failed to update channel:', snapCh.name, e);
+          }
+        } else {
+          // Create new channel
+          try {
+            const opts: Parameters<typeof guild.channels.create>[0] = {
+              name: snapCh.name,
+              type: snapCh.type as never,
+              position: snapCh.position,
+            };
+            if (parentId) opts.parent = parentId;
+            if (snapCh.topic) opts.topic = snapCh.topic;
+            if (snapCh.nsfw) opts.nsfw = snapCh.nsfw;
+            if (snapCh.rateLimitPerUser) opts.rateLimitPerUser = snapCh.rateLimitPerUser;
+            if (snapCh.bitrate) opts.bitrate = snapCh.bitrate;
+            if (snapCh.userLimit) opts.userLimit = snapCh.userLimit;
+
+            const overwrites = buildOverwrites(snapCh.permissionOverwrites);
+            if (overwrites?.length) opts.permissionOverwrites = overwrites;
+
+            await guild.channels.create(opts);
+            log(`Created new channel: ${snapCh.name}`);
+            await sleep(400);
+          } catch (e) {
+            console.error('[import-server] Failed to create channel:', snapCh.name, e);
+          }
         }
       }
     }
 
-    // ── 5. Update guild info ─────────────────────────────────────────────────
+    // ── 4. Update guild info ─────────────────────────────────────────────────
     const guildEdit: Parameters<typeof guild.edit>[0] = {};
-    if (sel.has('name')) guildEdit.name = snapshot.name;
+    if (sel.has('name'))        guildEdit.name        = snapshot.name;
     if (sel.has('description') && snapshot.description) guildEdit.description = snapshot.description;
 
     if (sel.has('icon') && snapshot.iconURL) {
@@ -425,16 +523,14 @@ export async function handleButton(interaction: ButtonInteraction) {
           const ext = snapshot.iconURL.includes('.png') ? 'png' : 'jpeg';
           guildEdit.icon = `data:image/${ext};base64,${Buffer.from(buf).toString('base64')}`;
         }
-      } catch { log('⚠️ No se pudo descargar el icono del servidor — se omite.'); }
+      } catch { log('⚠️ No se pudo descargar el icono — se omite.'); }
     }
 
-    if (Object.keys(guildEdit).length > 0) {
-      await guild.edit(guildEdit);
-    }
+    if (Object.keys(guildEdit).length > 0) await guild.edit(guildEdit);
 
     log('Import complete!');
 
-    // Build summary
+    // ── 5. Send result ───────────────────────────────────────────────────────
     const applied: string[] = [];
     if (sel.has('roles'))       applied.push(`**${snapshot.roles.length}** roles`);
     if (sel.has('channels'))    applied.push(`**${snapshot.categories.length}** categorías · **${snapshot.channels.length}** canales`);
@@ -446,9 +542,8 @@ export async function handleButton(interaction: ButtonInteraction) {
     const resultMsg =
       `✅ **Servidor importado desde \`${pending.snapshotName}\`!**\n` +
       `📋 Aplicado: ${applied.join(' · ')}\n` +
-      (useArchive
-        ? `📦 Los canales anteriores fueron archivados en **"📦 Archivo"** (solo visible para admins)\n`
-        : '') +
+      `🔄 Canales y roles con el mismo nombre fueron actualizados sin borrarse.\n` +
+      (useArchive ? `📦 Los canales sin coincidencia fueron archivados en **"📦 Archivo"**\n` : '') +
       `🕐 Snapshot capturado: ${new Date(snapshot.capturedAt).toLocaleString()}`;
 
     try {
@@ -461,8 +556,7 @@ export async function handleButton(interaction: ButtonInteraction) {
 
   } catch (err) {
     console.error('[import-server] Fatal error:', err);
-    const errMsg =
-      '❌ El import falló. Asegúrate de que el bot tiene permiso de **Administrador** y su rol está por encima de todos los demás.';
+    const errMsg = '❌ El import falló. Asegúrate de que el bot tiene permiso de **Administrador** y su rol está por encima de todos los demás.';
     try { await interaction.user.send(errMsg); } catch { /* best effort */ }
   }
 }
