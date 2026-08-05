@@ -1,0 +1,328 @@
+{
+  "name": "👻Anti Cubano Community",
+  "description": "0% Cubanos No negritas ni judios",
+  "iconURL": "https://cdn.discordapp.com/icons/1485071508694110501/c3a4ca1d639c1f651d86fbc6275b6cf5.webp?size=256",
+  "roles": [
+    {
+      "name": "silenciado",
+      "color": 16007755,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 4
+    },
+    {
+      "name": "nuevo rol",
+      "color": 0,
+      "hoist": false,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 8
+    },
+    {
+      "name": "Bots",
+      "color": 10181046,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 12
+    },
+    {
+      "name": "NoCubanos",
+      "color": 1250582,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 13
+    },
+    {
+      "name": "Folaking",
+      "color": 10181046,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 14
+    },
+    {
+      "name": "VerdugaCubana",
+      "color": 2067276,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "8",
+      "position": 15
+    },
+    {
+      "name": "Rey Anti Judios",
+      "color": 15844367,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": "0",
+      "position": 16
+    }
+  ],
+  "categories": [
+    {
+      "name": "📌〡Importantinga",
+      "type": 4,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ]
+    },
+    {
+      "name": "📝〡Canales de texto",
+      "type": 4,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ]
+    },
+    {
+      "name": "🎙️〡Canales de voz",
+      "type": 4,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ]
+    }
+  ],
+  "channels": [
+    {
+      "name": "💬〡general",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "32768"
+        },
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "📢〡musica",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ],
+      "parentIndex": 2
+    },
+    {
+      "name": "🎙️〡General 1",
+      "type": 2,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ],
+      "parentIndex": 2,
+      "bitrate": 64000,
+      "userLimit": 99
+    },
+    {
+      "name": "📜〡reglas-noob",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "34359739392",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "🥀-staff-chat",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "1024"
+        }
+      ]
+    },
+    {
+      "name": "🗂️〡multimedia",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "👥| Duos",
+      "type": 2,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ],
+      "parentIndex": 2,
+      "bitrate": 64000,
+      "userLimit": 2
+    },
+    {
+      "name": "🤠〡anuncio-sigma",
+      "type": 0,
+      "position": 1,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        },
+        {
+          "type": "role",
+          "name": "@everyone",
+          "allow": "0",
+          "deny": "2048"
+        }
+      ],
+      "parentIndex": 0
+    },
+    {
+      "name": "👥👤| Trios",
+      "type": 2,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ],
+      "parentIndex": 2,
+      "bitrate": 64000,
+      "userLimit": 3
+    },
+    {
+      "name": "🗜️〡comandus",
+      "type": 0,
+      "position": 2,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "🗜️〡nigga-rolplay",
+      "type": 0,
+      "position": 3,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "🗜️〡bot-culero",
+      "type": 0,
+      "position": 4,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ],
+      "parentIndex": 1
+    },
+    {
+      "name": "🥽〡mods",
+      "type": 15,
+      "position": 5,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ],
+      "parentIndex": 1,
+      "topic": "pasa los mods mas chidos que tengas eu"
+    },
+    {
+      "name": "😎〡texturepack",
+      "type": 15,
+      "position": 6,
+      "permissionOverwrites": [
+        {
+          "type": "role",
+          "name": "silenciado",
+          "allow": "0",
+          "deny": "274877909056"
+        }
+      ],
+      "parentIndex": 1,
+      "topic": "Foro de texturepacks"
+    }
+  ],
+  "capturedAt": "2026-08-05T00:03:39.857Z"
+}
