@@ -400,7 +400,7 @@ export async function handleButton(interaction: ButtonInteraction) {
             try {
               await (ch as GuildChannel & { edit(opts: object): Promise<unknown> }).edit({
                 parent: archiveCategory.id,
-                lockPermissions: false,
+                lockPermissions: true, // inherit the archive category's hidden permissions
               });
               await sleep(350);
             } catch (e) {
