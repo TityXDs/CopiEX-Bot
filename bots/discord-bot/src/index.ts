@@ -12,6 +12,7 @@ import * as deleteSnapshot from './commands/delete-snapshot.js';
 import * as download from './commands/download.js';
 import * as copyMessages from './commands/copy-messages.js';
 import * as previewServer from './commands/preview-server.js';
+import * as pasteMessages from './commands/paste-messages.js';
 
 const TOKEN = process.env.DISCORD_TOKEN;
 
@@ -33,6 +34,7 @@ commands.set(deleteSnapshot.data.name, deleteSnapshot as Command);
 commands.set(download.data.name,       download       as Command);
 commands.set(copyMessages.data.name,   copyMessages   as Command);
 commands.set(previewServer.data.name,  previewServer  as Command);
+commands.set(pasteMessages.data.name,  pasteMessages  as Command);
 
 const client = new Client({
   intents: [
@@ -49,7 +51,7 @@ client.on(Events.Error, err => {
 client.once(Events.ClientReady, c => {
   console.log(`✅ Discord bot ready! Logged in as ${c.user.tag}`);
   console.log(`📡 Serving ${c.guilds.cache.size} guild(s)`);
-  console.log('Commands: /copy-server, /import-server, /delete-snapshot, /download, /copy-messages, /preview-server');
+  console.log('Commands: /copy-server, /import-server, /delete-snapshot, /download, /copy-messages, /preview-server, /paste-messages');
 });
 
 client.on(Events.InteractionCreate, async (interaction: Interaction) => {

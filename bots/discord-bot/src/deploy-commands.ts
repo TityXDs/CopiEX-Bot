@@ -14,6 +14,7 @@ import * as deleteSnapshot from './commands/delete-snapshot.js';
 import * as download from './commands/download.js';
 import * as copyMessages from './commands/copy-messages.js';
 import * as previewServer from './commands/preview-server.js';
+import * as pasteMessages from './commands/paste-messages.js';
 
 const TOKEN = process.env.DISCORD_TOKEN;
 const CLIENT_ID = process.env.DISCORD_CLIENT_ID;
@@ -31,6 +32,7 @@ const commands = [
   download.data.toJSON(),
   copyMessages.data.toJSON(),
   previewServer.data.toJSON(),
+  pasteMessages.data.toJSON(),
 ];
 
 const rest = new REST().setToken(TOKEN);
