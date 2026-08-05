@@ -13,6 +13,7 @@ import * as importServer from './commands/import-server.js';
 import * as deleteSnapshot from './commands/delete-snapshot.js';
 import * as download from './commands/download.js';
 import * as copyMessages from './commands/copy-messages.js';
+import * as previewServer from './commands/preview-server.js';
 
 const TOKEN = process.env.DISCORD_TOKEN;
 const CLIENT_ID = process.env.DISCORD_CLIENT_ID;
@@ -29,6 +30,7 @@ const commands = [
   deleteSnapshot.data.toJSON(),
   download.data.toJSON(),
   copyMessages.data.toJSON(),
+  previewServer.data.toJSON(),
 ];
 
 const rest = new REST().setToken(TOKEN);
